@@ -1,0 +1,1018 @@
+﻿@{
+Layout = "~/Views/Shared/Header.cshtml";
+ViewData["Title"] = "Header";
+}
+<style>
+h2 {
+color: #001d3d;
+}
+
+h3 {
+color: #2a2e34;
+}
+
+h1 {
+color: #f1faee;
+}
+
+#hood {
+background-color: #ffc300;
+}
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+#note_quiz {
+background-color: #d4a373;
+}
+</style>
+<br />
+<br />
+<br />
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>JavaScript Tutorial</h1></div>
+<div class="pt-5">
+<div class="row ">
+<div class="col-4 d-flex flex-column align-items-center text-left">
+<div class="p-5" style="color:#2a2e34; ">
+<ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+<li class="text-left mb-3 fs-3 text-lg" style="color: #ffc300; " id="title1">Les variables</li>
+<li class="text-left fs-3  mb-3" id="title2">Quiz 1</li>
+<li class="text-left fs-3 mb-3" id="title3">Les conditions</li>
+<li class="text-left fs-3 mb-3" id="title4">Quiz 2</li>
+<li class="text-left fs-3 mb-3" id="title5"> Les boucles</li>
+<li class="text-left fs-3 mb-3" id="title6">Quiz 3</li>
+<li class="text-left fs-3 mb-3" id="title7">Les fonctions</li>
+<li class="text-left fs-3 mb-3" id="title8">Quiz 4</li>
+<li class="text-left fs-3 mb-3" id="title9">Les classes</li>
+<li class="text-left fs-3 mb-3" id="title10">Quiz 5</li>
+<li class="text-left fs-3 mb-3" id="title11">Les timers</li>
+<li class="text-left fs-3 mb-3" id="title12">Quiz 6</li>
+<li class="text-left fs-3 mb-3" id="title13">Certification</li>
+</ol>
+</div>
+
+</div>
+<div class="col ">
+<div id="content-container d-flex flex-column justify-content-center">
+<div id="page1" class="page">
+<h2>  Les variables</h2> <br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GU8kxJ3P67I?si=GArn--ToKSGBSSA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div><br />
+<h3>Résumé</h3>
+
+<p><strong>Déclaration :</strong></p>
+<p>En JavaScript, la déclaration d'une variable se fait en utilisant le mot-clé <code>var</code>, <code>let</code>, ou <code>const</code>,<br /> suivi du nom de la variable et du signe égal (<code>=</code>) pour affecter une valeur.</p>
+
+<pre><code class="javascript">
+        // Utilisation de var (globale, évitez autant que possible)
+        var nomVariable = "Valeur de la variable";
+
+        // Utilisation de let (limitée à un bloc d'instructions)
+        let autreVariable = 42;
+
+        // Utilisation de const (constante, ne peut pas être réaffectée)
+        const constanteVariable = "Valeur constante";
+    </code></pre>
+
+<p><strong>Affectation :</strong></p>
+<p>Les variables peuvent être réaffectées avec de nouvelles valeurs en utilisant le même processus de déclaration.</p>
+
+<pre><code class="javascript">
+        nomVariable = "Nouvelle valeur";
+        autreVariable = 56;
+        // constanteVariable = "Ceci générera une erreur, car la constante ne peut pas être réaffectée";
+    </code></pre>
+
+<p><strong>Utilisation :</strong></p>
+<p>Les variables sont utilisées pour stocker des données et peuvent être utilisées dans des opérations ou dans des affichages.</p>
+
+<pre><code class="javascript">
+            let resultat = autreVariable * 2;
+            console.log(resultat); // Affiche le résultat dans la console du navigateur
+        </code></pre>
+</div>
+
+
+<div id="page2" class="page ">
+<h3>Quiz</h3>
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Quelle est la syntaxe pour déclarer une variable en JavaScript?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> var x = 10;</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> let x = 10;</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> x = 10;</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> Comment réaffectez-vous une variable en JavaScript?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1">x := 20;</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2">x = 20;</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> x <= 20;</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Quelle est l'utilité d'une variable en programmation?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> Stocker des données</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> Cuire un gâteau</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> Piloter un avion</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Comment affichez-vous le contenu d'une variable en JavaScript?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> console.log(x);</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> print(x)</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> echo x;</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Quelle est la différence entre déclaration et affectation de variable en JavaScript?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> Aucune différence</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> La déclaration crée une variable, l'affectation lui donne une valeur</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> La déclaration initialise une variable, l'affectation la modifie</label><br>
+</div>
+</div>
+
+<div id="page3" class="page">
+<h2> Les conditions</h2><br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zwLmRotDdu8?si=v8zwp417ZdhN2JKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br />
+<h3>Résumé </h3>
+<p><strong>1. Déclaration if :</strong></p>
+<pre><code class="javascript">
+        if (condition) {
+            // Code à exécuter si la condition est vraie
+        }
+    </code></pre>
+
+<p><strong>2. Déclaration if-else :</strong></p>
+<pre><code class="javascript">
+            if (condition) {
+                // Code à exécuter si la condition est vraie
+            } else {
+                // Code à exécuter si la condition est fausse
+            }
+        </code></pre>
+
+<p><strong>3. Déclaration switch :</strong></p>
+<pre><code class="javascript">
+    switch (expression) {
+        case value1:
+            // Code à exécuter si expression === value1
+            break;
+        case value2:
+            // Code à exécuter si expression === value2
+            break;
+        // Ajoutez d'autres cas au besoin
+        default:
+            // Code à exécuter si aucun cas ne correspond
+    }
+</code></pre>
+
+<p><strong>4. Condition Ternaire :</strong></p>
+<pre><code class="javascript">
+        let variable = (condition) ? valeurSiVraie : valeurSiFausse;
+        // La variable prend la valeur de valeurSiVraie si la condition est vraie, sinon elle prend la valeur de valeurSiFausse
+    </code></pre>
+
+</div>
+
+
+<div id="page4" class="page">
+<h3>Quiz</h3>
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Comment déclarez-vous une condition en JavaScript avec la syntaxe "if"?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> if (condition) { /* Code */ }</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> condition { /* Code */ }</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> for (condition) { /* Code */ }</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> Quelle structure conditionnelle est utilisée pour énumérer plusieurs cas en JavaScript?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1"> if-else</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2"> switch</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> for</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Comment définissez-vous une condition ternaire en JavaScript?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> condition ? valeurSiVraie : valeurSiFausse;</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> if (condition) { /* Code */ } else { /* Code */ }</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> switch (condition) { /* Code */ }</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Quelle est la structure utilisée pour traiter le cas par défaut dans un ensemble de conditions multiples?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> if-else</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> switch</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> for</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Comment écrivez-vous une condition pour vérifier si une variable est égale à une valeur spécifique en JavaScript?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> if (variable = valeur) { /* Code */ }</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> if (variable == valeur) { /* Code */ }</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> if (variable === valeur) { /* Code */ }</label><br>
+</div>
+</div>
+
+
+<div id="page5" class="page">
+<h2>  Les boucles </h2><br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kLdQAsrcyvk?si=R9iUqXtO2HmOjOzi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br />
+
+<h3>Résumé</h3>
+
+<p><strong>1. Boucle `for` :</strong></p>
+<pre><code class="javascript">
+        for (initialisation; condition; itération) {
+            // Code à exécuter à chaque itération
+        }
+    </code></pre>
+
+<p><strong>2. Boucle `while` :</strong></p>
+<pre><code class="javascript">
+        while (condition) {
+            // Code à exécuter tant que la condition est vraie
+        }
+    </code></pre>
+
+<p><strong>3. Boucle `do-while` :</strong></p>
+<pre><code class="javascript">
+        do {
+            // Code à exécuter au moins une fois, puis tant que la condition est vraie
+        } while (condition);
+    </code></pre>
+
+<p><strong>4. Boucle `for...in` :</strong></p>
+<pre><code class="javascript">
+        for (variable in objet) {
+            // Code à exécuter pour chaque propriété de l'objet
+        }
+    </code></pre>
+
+<p><strong>5. Boucle `for...of` :</strong></p>
+<pre><code class="javascript">
+        for (variable of tableau) {
+            // Code à exécuter pour chaque élément du tableau
+        }
+    </code></pre>
+
+
+</div>
+
+
+<div id="page6" class="page">
+
+<h3>Quiz</h3>
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Quelle boucle est utilisée pour itérer sur une séquence de valeurs avec une condition d'arrêt?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> for</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> while</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> do-while</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> Quelle boucle s'exécute tant qu'une condition donnée est vraie?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1"> for</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2"> while</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> do-while</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Quelle boucle s'exécute au moins une fois, puis tant que la condition est vraie?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> for</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> while</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> do-while</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Quelle boucle est utilisée pour itérer sur les propriétés d'un objet en JavaScript?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> for</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> for...in</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> for...of</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Quelle boucle est utilisée pour itérer sur les éléments d'un tableau en JavaScript?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> for</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> for...in</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> for...of</label><br>
+</div>
+</div>
+
+
+<div id="page7" class="page">
+<h2>Les fonctions</h2><br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/EvHAiskwHvE?si=Utrc7oZj7jzqCLsB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br />
+<h3>Résumé</h3>
+
+
+<p><strong>1. Déclaration de Fonction :</strong></p>
+<pre><code class="javascript">
+function nomDeLaFonction(parametre1, parametre2) {
+// Code à exécuter
+return resultat; // Facultatif
+}
+</code></pre>
+
+<p><strong>2. Appel de Fonction :</strong></p>
+<pre><code class="javascript">
+nomDeLaFonction(valeur1, valeur2);
+</code></pre>
+
+<p><strong>3. Paramètres et Arguments :</strong></p>
+<pre><code class="javascript">
+function addition(a, b) {
+return a + b;
+}
+let resultat = addition(3, 5); // resultat est maintenant égal à 8
+</code></pre>
+
+<p><strong>4. Fonction Fléchée :</strong></p>
+<pre><code class="javascript">
+const carre = (x) => x * x;
+let resultat = carre(4); // resultat est maintenant égal à 16
+</code></pre>
+
+<p><strong>5. Fonctions Anonymes :</strong></p>
+<pre><code class="javascript">
+let fonctionAnonyme = function() {
+// Code à exécuter
+};
+</code></pre>
+
+</div>
+
+
+<div id="page8" class="page">
+<h3>Quiz</h3>
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Comment déclarez-vous une fonction en JavaScript?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> function maFonction() { /* Code */ }</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> let maFonction = function() { /* Code */ };</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> maFonction = function() { /* Code */ };</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> À quoi sert le mot-clé `return` dans une fonction?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1"> À déclarer une variable</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2"> À mettre fin à une boucle</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> À renvoyer une valeur depuis la fonction</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Comment appelez-vous une fonction en JavaScript?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> maFonction();</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> call maFonction;</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> execute maFonction();</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Quelle est la différence entre une fonction déclarée et une fonction anonyme?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> Aucune différence</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> Les fonctions anonymes n'ont pas de corps</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> Les fonctions déclarées ont un nom, les fonctions anonymes n'en ont pas</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Comment déclarez-vous une fonction fléchée en JavaScript?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> function maFonction() => {/* Code */}</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> const maFonction = (param) => {/* Code */}</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> let maFonction => {/* Code */}</label><br>
+</div>
+</div>
+
+
+<div id="page9" class="page">
+<h2> Les classes</h2><br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2HAPViIAYjc?si=E-q5QuTw9RJ_4BRi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br />
+<h3>Résumé</h3>
+
+<p><strong>1. Déclaration de Classe :</strong></p>
+<pre><code class="javascript">
+class NomDeLaClasse {
+constructor(parametre1, parametre2) {
+this.parametre1 = parametre1;
+this.parametre2 = parametre2;
+}
+
+methode() {
+// Code à exécuter
+}
+}
+</code></pre>
+
+<p><strong>2. Instanciation :</strong></p>
+<pre><code class="javascript">
+let instance = new NomDeLaClasse(valeur1, valeur2);
+</code></pre>
+
+<p><strong>3. Méthodes de Classe :</strong></p>
+<pre><code class="javascript">
+class Rectangle {
+constructor(longueur, largeur) {
+this.longueur = longueur;
+this.largeur = largeur;
+}
+
+calculerSurface() {
+return this.longueur * this.largeur;
+}
+}
+</code></pre>
+
+<p><strong>4. Héritage :</strong></p>
+<pre><code class="javascript">
+class SousClasse extends ClasseParente {
+// Méthodes et propriétés spécifiques à la sous-classe
+}
+</code></pre>
+
+<p><strong>5. Méthode `static` :</strong></p>
+<pre><code class="javascript">
+class Utilitaire {
+static methodeStatique() {
+// Code à exécuter
+}
+}
+</code></pre>
+
+</div>
+
+
+<div id="page10" class="page">
+<h3>Quiz</h3>
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Comment déclarez-vous une classe en JavaScript?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> class MaClasse { /* Code */ }</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> let MaClasse = function() { /* Code */ };</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> const MaClasse = () => { /* Code */ };</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> Comment instanciez-vous une classe en JavaScript?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1"> let instance = create(MaClasse);</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2"> let instance = MaClasse.create();</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> let instance = new MaClasse();</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Quelle méthode est appelée automatiquement lors de la création d'une nouvelle instance de classe?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> init()</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> constructor()</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> create()</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Comment définissez-vous une méthode dans une classe?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> function maMethode() { /* Code */ }</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> maMethode() { /* Code */ }</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> maMethode() = { /* Code */ }</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Comment créez-vous une classe héritant d'une autre classe en JavaScript?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> class NouvelleClasse extends ClasseParente { /* Code */ }</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> NouvelleClasse : ClasseParente { /* Code */ }</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> create NouvelleClasse from ClasseParente { /* Code */ }</label><br>
+</div>
+
+
+</div>
+
+
+<div id="page11" class="page">
+<h2>Les timers</h2><br />
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kwcFfskBaag?si=jxX8HPTLXT4ca2b1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<br />
+
+<h3>Résumé</h3>
+
+
+<p><strong>1. setTimeout :</strong></p>
+<pre><code class="javascript">
+    setTimeout(function() {
+        // Code à exécuter après un délai spécifié
+    }, délaiEnMillisecondes);
+</code></pre>
+
+<p><strong>2. setInterval :</strong></p>
+<pre><code class="javascript">
+            setInterval(function() {
+                // Code à exécuter à intervalles réguliers
+            }, intervalleEnMillisecondes);
+        </code></pre>
+
+<p><strong>3. clearInterval :</strong></p>
+<pre><code class="javascript">
+        let intervalID = setInterval(function() {
+            // Code à exécuter à intervalles réguliers
+        }, intervalleEnMillisecondes);
+
+        // Pour arrêter l'intervalle
+        clearInterval(intervalID);
+    </code></pre>
+
+<p><strong>4. clearTimeout :</strong></p>
+<pre><code class="javascript">
+        let timeoutID = setTimeout(function() {
+            // Code à exécuter après un délai spécifié
+        }, délaiEnMillisecondes);
+
+        // Pour annuler le délai d'exécution
+        clearTimeout(timeoutID);
+    </code></pre>
+
+
+</div>
+
+
+<div id="page12" class="page">
+
+
+<div class="quiz-question">
+    <p><strong>Question 1 :</strong> Comment utilisez-vous setTimeout pour exécuter une fonction après un délai?</p>
+    <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+    <label for="q1_choice1"> setTimeout(myFunction, 1000);</label><br>
+    <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+    <label for="q1_choice2"> setInterval(myFunction, 1000);</label><br>
+    <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+    <label for="q1_choice3"> setDelay(myFunction, 1000);</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 2 :</strong> Quelle fonction est utilisée pour arrêter un intervalle créé avec setInterval?</p>
+    <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+    <label for="q2_choice1"> stopInterval(intervalID);</label><br>
+    <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+    <label for="q2_choice2"> clearInterval(intervalID);</label><br>
+    <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+    <label for="q2_choice3"> endInterval(intervalID);</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 3 :</strong> Comment annulez-vous un délai d'exécution créé avec setTimeout?</p>
+    <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+    <label for="q3_choice1"> clearDelay(timeoutID);</label><br>
+    <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+    <label for="q3_choice2"> clearTimeout(timeoutID);</label><br>
+    <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+    <label for="q3_choice3"> cancelDelay(timeoutID);</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 4 :</strong> Quelle fonction est utilisée pour exécuter une fonction à intervalles réguliers?</p>
+    <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+    <label for="q4_choice1"> setDelay(myFunction,   1000);</label><br>
+    <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+    <label for="q4_choice2"> startInterval(myFunction, 1000);</label><br>
+    <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+    <label for="q4_choice3"> setInterval(myFunction, 1000);</label><br>
+</div>
+
+<div class="quiz-question">
+    <p><strong>Question 5 :</strong> Quel est le rôle de clearInterval dans l'utilisation des timers?</p>
+    <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+    <label for="q5_choice1"> Arrête un délai d'exécution</label><br>
+    <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+    <label for="q5_choice2"> Arrête un intervalle en cours</label><br>
+    <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+    <label for="q5_choice3"> Annule un délai d'exécution</label><br>
+</div>
+
+</div>
+
+
+<div id="page13" class="page">
+<div id="finalResult d-flex flex-column justify-content-center pr-3">
+    <div class="row">
+        <div class="col">
+            <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                <h1>Quiz 1</h1>
+                <h2 id="note_quiz1"></h2>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                <h1>Quiz 2</h1>
+                <h2 id="note_quiz2"></h2>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                <h1>Quiz 3</h1>
+                <h2 id="note_quiz3"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                <h1>Quiz 4</h1>
+                <h2 id="note_quiz4"></h2>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                <h1>Quiz 5</h1>
+                <h2 id="note_quiz5"></h2>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                <h1>Quiz 6</h1>
+                <h2 id="note_quiz6"></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+            <h1>Note</h1>
+            <h2 id="note_finale"></h2>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+</div>
+<div>
+    <br /><br />
+    <nav id="SP" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+            <li class="page-item"><a style="background-color: #ffc300" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+        </ul>
+    </nav>
+    <div id="certificatButton" style="display: none;">
+        <button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+function generateCertificate() {
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+const fullName = "@Model.FirstName " + "@Model.LastName";
+const note = showResultsPage();
+
+// Définir la mise en page verticale
+
+doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+// Dessiner un rectangle coloré (1 cm de largeur)
+doc.rect(10, 10, 189, 277, 'FD');
+
+// Ajouter des informations utilisateur
+doc.setFontSize(20);
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+doc.setFontSize(16);
+doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+doc.setFontSize(18);
+doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+doc.text(fullName, 105, 70, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.setFontSize(14);
+doc.text('Has successfully completed JavaScript Tutorial', 105, 100, { align: 'center' });
+
+doc.setFontSize(16);
+doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+// Ajouter d'autres  informations selon vos besoins
+doc.setFontSize(14);
+doc.text('With a degree of ', 105, 135, { align: 'center' });
+doc.setFontSize(14);
+doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.setFontSize(16);
+doc.text('Director', 105, 180, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.text('Associate Professor', 105, 210, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+doc.setFontSize(12);
+doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+// Télécharger le PDF
+doc.save("Certificate.pdf");
+}
+
+
+
+var currentPage = 1;
+var totalPages = 13;
+
+function showPage(pageId) {
+// Masquer toutes les pages
+var pages = document.getElementsByClassName('page');
+for (var i = 0; i < pages.length; i++) {
+pages[i].style.display = 'none';
+}
+
+// Afficher la page spécifique
+var pageToShow = document.getElementById(pageId);
+if (pageToShow) {
+pageToShow.style.display = 'block';
+}
+}
+
+function showPreviousPage() {
+if (currentPage > 1) {
+currentPage--;
+showPage('page' + currentPage);
+}
+var title0 = document.getElementById('title' + (currentPage + 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#ffc300';
+
+}
+
+function showNextPage() {
+if (currentPage < 12) {
+currentPage++;
+showPage('page' + currentPage);
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#ffc300';
+
+} else {
+currentPage++;
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+title0.style.color = '#2a2e34';
+    title.style.color = '#ef233c';
+showResultsPage();
+showCertificatButton()
+}
+
+}
+
+function showCertificatButton() {
+// Masquer la pagination
+var pagination = document.getElementById('SP');
+if (pagination) {
+pagination.style.display = 'none';
+}
+
+// Afficher le bouton "Résultat"
+var resultsButton = document.getElementById('certificatButton');
+if (resultsButton) {
+resultsButton.style.display = 'block';
+}
+}
+
+
+
+function showResultsPage() {
+// Masquer toutes les pages
+showPage('page13');
+var correctAnswersPages = [
+// quiz1
+[
+[0, 0, 1],
+[0, 1, 0],
+[1, 0, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+// quiz2
+[
+[0, 0, 1],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+//quiz3
+[
+[0, 1, 0],
+[1, 0],
+[1, 0],
+[0, 1],
+[1, 0]
+],
+//quiz4
+[
+[1, 0, 0],
+[0, 1, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 0, 3]
+],
+//quiz5
+[
+[0, 1, 0],
+[0, 0, 1],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0]
+],
+//quiz6
+[
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 1, 0]
+]
+
+]
+
+var pages = [2, 4, 6, 8, 10, 12];
+// pour comparer les resultat
+var totalQuestions = 5; // Le nombre total de questions par page
+var totalScore = 0; // Le score total de l'utilisateur
+
+for (let i = 0; i < pages.length; i++) {
+var pageId = 'page' + pages[i];
+var userResponses = extractUserResponses(pageId);
+var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+var pageScore = 0; // Score de la page actuelle
+
+for (let j = 0; j < totalQuestions; j++) {
+var isQuestionCorrect = true;
+
+// Comparer chaque réponse de l'utilisateur avec la réponse correcte
+for (let k = 0; k < userResponses[j].length; k++) {
+if (userResponses[j][k] !== correctAnswers[j][k]) {
+    isQuestionCorrect = false;
+    break;
+}
+}
+
+if (isQuestionCorrect) {
+pageScore++;
+}
+}
+
+totalScore += pageScore;
+var noteId = 'note_quiz' + (i + 1);
+document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+}
+
+var noteFinale = document.getElementById('note_finale');
+noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+return totalScore;
+}
+
+
+
+
+
+function extractUserResponses(pageId) {
+var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+var userResponses = [];
+
+for (let i = 0; i < quizQuestions.length; i++) {
+var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+var choices = [];
+
+checkboxes.forEach(function (checkbox) {
+choices.push(checkbox.checked ? 1 : 0);
+});
+
+userResponses.push(choices);
+}
+
+return userResponses;
+}
+
+
+
+// Appeler showPage avec l'identifiant de la première page lors du chargement initial
+document.addEventListener("DOMContentLoaded", function () {
+showPage('page1');
+});</script>
+
+<br />
+<br />
+<br />

@@ -1,0 +1,1011 @@
+﻿@{
+    Layout = "~/Views/Shared/Header.cshtml";
+    ViewData["Title"] = "Header";
+}
+<style>
+    h2 {
+        color: #001d3d;
+    }
+
+    h3 {
+        color: #2a2e34;
+    }
+
+    h1 {
+        color: #f1faee;
+    }
+
+    #hood {
+        background-color: #6f2dbd;
+    }
+
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+    #note_quiz {
+        background-color: #d4a373;
+    }
+</style>
+<br />
+<br />
+<br />
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>Csharp Tutorial</h1></div>
+<div class="pt-5">
+    <div class="row ">
+        <div class="col-4 d-flex flex-column align-items-center text-left">
+            <div class="p-5" style="color:#2a2e34; ">
+                <ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+                    <li class="text-left mb-3 fs-2 text-lg" style="color: #6f2dbd;" id="title1">Afficher du texte</li>
+                    <li class="text-left fs-2  mb-3" id="title2">Quiz 1</li>
+                    <li class="text-left fs-2 mb-3" id="title3">Types de données</li>
+                    <li class="text-left fs-2 mb-3" id="title4">Quiz 2</li>
+                    <li class="text-left fs-2 mb-3" id="title5">Les variables</li>
+                    <li class="text-left fs-2 mb-3" id="title6">Quiz 3</li>
+                    <li class="text-left fs-2 mb-3" id="title7">Les Opérateurs</li>
+                    <li class="text-left fs-2 mb-3" id="title8">Quiz 4</li>
+                    <li class="text-left fs-2 mb-3" id="title9">Les condition</li>
+                    <li class="text-left fs-2 mb-3" id="title10">Quiz 5</li>
+                    <li class="text-left fs-2 mb-3" id="title11">Lecture au clavier</li>
+                    <li class="text-left fs-2 mb-3" id="title12">Quiz 6</li>
+                    <li class="text-left fs-2 mb-3" id="title13">Certification</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="col ">
+            <div id="content-container d-flex flex-column justify-content-center">
+                <div id="page1" class="page">
+                    <h2>afficher du texte</h2> <br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/T1ghHTJtdGQ?si=VWBo_DPM-NAoQeqG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div><br />
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Affichage Console :</strong></p>
+                    <pre><code class="csharp">
+        Console.WriteLine("Hello, World!");
+    </code></pre>
+
+                    <p><strong>2. Formatage de Chaînes :</strong></p>
+                    <pre><code class="csharp">
+        string nom = "John";
+        int age = 25;
+        Console.WriteLine($"Mon nom est {nom} et j'ai {age} ans.");
+    </code></pre>
+
+                    <p><strong>3. Saisie Utilisateur :</strong></p>
+                    <pre><code class="csharp">
+        Console.Write("Entrez votre nom : ");
+        string nomUtilisateur = Console.ReadLine();
+        Console.WriteLine($"Bonjour, {nomUtilisateur}!");
+    </code></pre>
+                </div>
+
+
+                <div id="page2" class="page ">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment affichez-vous du texte à la console en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> Console.print("Hello, World!");</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> Console.display("Hello, World!");</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> Console.WriteLine("Hello, World!");</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment formattez-vous une chaîne en utilisant des interpolations en C#?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> Console.WriteLine("Mon nom est {nom} et j'ai {age} ans.");</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> Console.WriteLine("Mon nom est " + nom + " et j'ai " + age + " ans.");</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> Console.WriteLine($"Mon nom est {nom} et j'ai {age} ans.");</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment obtenez-vous une entrée utilisateur en C#?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> string input = Console.getInput();</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> int input = Console.readInt();</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> string input = Console.ReadLine();</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment affichez-vous du texte sans saut de ligne à la console en C#?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> Console.write("Hello, World!");</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> Console.displayLine("Hello, World!");</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> Console.WriteLine("Hello, World!");</label><br />
+                    </div>
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle méthode utilisez-vous pour obtenir une entrée numérique de l'utilisateur en C#?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Console.readInt();</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> int.Parse(Console.ReadLine());</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Convert.ToInt32(Console.ReadLine());</label><br>
+                    </div>
+                </div>
+
+                <div id="page3" class="page">
+                    <h2>  types de données</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/T4D2a2gbxYc?si=W8HxBSjdP7LGx-nM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé </h3>
+                    <p><strong>1. Types de Données Fondamentaux :</strong></p>
+                    <pre><code class="csharp">
+        int entier = 10;
+        double reel = 3.14;
+        char caractere = 'A';
+        bool booleen = true;
+    </code></pre>
+
+                    <p><strong>2. Chaînes de Caractères :</strong></p>
+                    <pre><code class="csharp">
+        string texte = "Hello, World!";
+    </code></pre>
+
+                    <p><strong>3. Types de Données Composites :</strong></p>
+                    <pre><code class="csharp">
+        int[] tableau = {1, 2, 3, 4};
+        List&lt;string&gt; liste = new List&lt;string&gt;();
+        Tuple&lt;int, string&gt; tuple = Tuple.Create(1, "exemple");
+    </code></pre>
+
+                    <p><strong>4. Types de Données Nullables :</strong></p>
+                    <pre><code class="csharp">
+                int? nullable = null;
+        </code></pre>
+
+                </div>
+
+
+                <div id="page4" class="page">
+                    <h3>Quiz</h3>
+
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quel est le type de données pour stocker des nombres entiers en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> float</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> int</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> string</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment déclarez-vous une chaîne de caractères en C#?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> string texte = 'Hello';</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> char texte = "Hello";</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> string texte = "Hello";</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quel est le type de données pour stocker des valeurs vrai ou faux en C#?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> boolean</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> bool</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> int</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment déclarez-vous un tableau en C#?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> array liste = {1, 2, 3};</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> int tableau = [1, 2, 3];</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> int[] tableau = {1, 2, 3};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quel est le type de données utilisé pour stocker des valeurs nullables en C#?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> void</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> nullable</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> int?</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page5" class="page">
+                    <h2> Les variables </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ssu2rZUZY64?si=axP920VVcUrdiyzy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+
+                    <p><strong>Déclaration :</strong></p>
+                    <p>En C#, la déclaration d'une variable se fait en spécifiant le type de données suivi du nom de la variable.</p>
+
+                    <pre><code class="csharp">
+            int monEntier;
+            string maChaine;
+            double monReel;
+        </code></pre>
+
+                    <p><strong>Affectation :</strong></p>
+                    <p>Les variables peuvent être assignées avec une valeur après leur déclaration.</p>
+
+                    <pre><code class="csharp">
+            monEntier = 42;
+            maChaine = "Hello, World!";
+            monReel = 3.14;
+        </code></pre>
+
+                    <p><strong>Initialisation :</strong></p>
+                    <p>Il est possible de déclarer et d'initialiser une variable en une seule ligne.</p>
+
+                    <pre><code class="csharp">
+            int age = 25;
+            string nom = "John";
+        </code></pre>
+
+                    <p><strong>Utilisation :</strong></p>
+                    <p>Les variables sont utilisées pour stocker des données et peuvent être utilisées dans des opérations ou dans des affichages.</p>
+
+                    <pre><code class="csharp">
+            int somme = monEntier + 10;
+            Console.WriteLine("Nom : " + nom);
+        </code></pre>
+
+
+                </div>
+
+
+                <div id="page6" class="page">
+
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclarez-vous une variable en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> int variable;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> variable int;</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> var = variable;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la syntaxe pour assigner une valeur à une variable en C#?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> variable = 42;</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> 42 = variable;</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> assign(42, variable);</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la différence entre déclaration et initialisation d'une variable?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Aucune différence</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> La déclaration crée une variable, l'initialisation lui donne une valeur</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> La déclaration initialise une variable, l'assignation la modifie</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment déclarez-vous et initialisez-vous une variable en une seule ligne en C#?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> int num =;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> var num = 10;</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> initialize num 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Comment utilisez-vous une variable dans une opération en C#?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> operation = variable + 5;</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> result = variable * 2;</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> execute(variable);</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page7" class="page">
+                    <h2>Les Opérateurs</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9zUUp3HOtxo?si=0ResQkPpXvCqjnWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+
+
+                    <p><strong>1. Opérations Arithmétiques :</strong></p>
+                    <p>En C#, les opérations arithmétiques de base comprennent l'addition (+), la soustraction (-), la multiplication (*), et la division (/).</p>
+
+                    <pre><code class="csharp">
+                int resultat = 10 + 5;    // Addition
+                int difference = 20 - 8;  // Soustraction
+                int produit = 6 * 4;      // Multiplication
+                int quotient = 15 / 3;    // Division
+            </code></pre>
+
+                    <p><strong>2. Opérations de Comparaison :</strong></p>
+                    <p>Les opérations de comparaison comprennent l'égalité (==), l'inégalité (!=), la supériorité (>), l'infériorité (<), la supériorité ou égalité (>=), et l'infériorité ou égalité (<=).</p>
+
+                    <pre><code class="csharp">
+            bool estEgal = (a == b);
+            bool estDifferent = (x != y);
+            bool estSuperieur = (m > n);
+        </code></pre>
+
+                    <p><strong>3. Opérations Logiques :</strong></p>
+                    <p>Les opérations logiques incluent ET logique (&&), OU logique (||), et NON logique (!).</p>
+
+                    <pre><code class="csharp">
+            bool condition1 = (x > 0) && (y < 10);  // ET logique
+            bool condition2 = (a < 5) || (b > 20);  // OU logique
+            bool nonCondition = !(a == b);          // NON logique
+        </code></pre>
+
+                    <p><strong>4. Opérations d'Incrémentation et de Décrémentation :</strong></p>
+                    <p>Les opérations d'incrémentation (++), et de décrémentation (--) permettent d'augmenter ou de diminuer la valeur d'une variable.</p>
+
+                    <pre><code class="csharp">
+            int nombre = 10;
+            nombre++;   // Incrémentation
+            nombre--;   // Décrémentation
+        </code></pre>
+
+                </div>
+
+
+                <div id="page8" class="page">
+                    <h3>Quiz</h3>
+
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quelle opération arithmétique est représentée par le symbole '*' en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> Soustraction</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> Addition</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> Multiplication</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle opération de comparaison vérifie si deux valeurs sont égales en C#?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> > </label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> == </label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> != </label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle opération logique combine deux conditions avec un ET logique en C#?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> || </label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> && </label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> ! </label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment incrémente-t-on une variable en C#?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> variable++;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> ++variable;</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> variable += 1;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle opération de comparaison vérifie si une valeur est inférieure ou égale à une autre en C#?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> &lt; </label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> &gt;= </label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> == </label><br>
+                    </div>
+                </div>
+
+
+                <div id="page9" class="page">
+                    <h2> Les conditions</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QkOUHfTVXEI?si=QlEbxXmRdf0yydqN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+
+
+
+
+                    <p><strong>1. Structure IF :</strong></p>
+                    <p>La structure `if` permet d'exécuter un bloc de code si une condition est vraie.</p>
+
+                    <pre><code class="csharp">
+if (condition)
+{
+// Code à exécuter si la condition est vraie
+}
+</code></pre>
+
+                    <p><strong>2. Structure IF-ELSE :</strong></p>
+                    <p>La structure `if-else` permet d'exécuter un bloc de code si une condition est vraie et un autre bloc si la condition est fausse.</p>
+
+                    <pre><code class="csharp">
+if (condition)
+{
+// Code à exécuter si la condition est vraie
+}
+else
+{
+// Code à exécuter si la condition est fausse
+}
+</code></pre>
+
+                    <p><strong>3. Structure SWITCH :</strong></p>
+                    <p>La structure `switch` permet de gérer plusieurs cas différents en fonction de la valeur d'une variable.</p>
+
+                    <pre><code class="csharp">
+switch (variable)
+{
+case valeur1:
+// Code à exécuter si variable équivaut à valeur1
+break;
+case valeur2:
+// Code à exécuter si variable équivaut à valeur2
+break;
+default:
+// Code à exécuter si aucune des valeurs précédentes n'est atteinte
+break;
+}
+</code></pre>
+
+                    <p><strong>4. Opérateurs de Comparaison :</strong></p>
+                    <p>Les opérateurs de comparaison tels que `==`, `!=`, `>`, `<`, `>=`, et `<=` sont utilisés pour évaluer des conditions.</p>
+
+                    <pre><code class="csharp">
+if (x > y)
+{
+// Code à exécuter si x est supérieur à y
+}
+</code></pre>
+
+                    <p><strong>5. Opérateurs Logiques :</strong></p>
+                    <p>Les opérateurs logiques tels que `&&` (ET logique), `||` (OU logique), et `!` (NON logique) sont utilisés pour combiner des conditions.</p>
+
+                    <pre><code class="csharp">
+if (condition1 && condition2)
+{
+// Code à exécuter si condition1 ET condition2 sont vraies
+}
+</code></pre>
+
+                </div>
+
+
+                <div id="page10" class="page">
+                    <h3>Quiz</h3>
+
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une condition `if` en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> if (condition) { /* Code */ }</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> for (int i = 0; i &lt; 5; i++) { /* Code */ }</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> switch (variable) { /* Code */ }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle structure est utilisée pour exécuter un bloc de code si une condition est vraie et un autre bloc si la condition est fausse?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> if-else</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> switch</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> for</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment utilise-t-on la structure `switch` en C#?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> switch (condition) { /* Code */ }</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> switch (variable) { case valeur: /* Code */ break; }</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> if (condition) { /* Code */ } else { /* Code */ }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quels sont les opérateurs de comparaison en C#?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> &gt;, &lt;, ==, !=</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> +, -, *, /</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> &&, ||, !</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quel opérateur logique est utilisé pour vérifier si deux conditions sont toutes deux vraies?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> ||</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> &amp;&amp;</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> !</label><br>
+                    </div>
+
+
+                </div>
+
+
+                <div id="page11" class="page">
+                    <h2>
+                        lecture au clavier
+                    </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qqx6uARSewY?si=gXqEL0tILHK3i_xD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+                    <p><strong>1. Console.ReadLine() :</strong></p>
+                    <p>La méthode `Console.ReadLine()` est utilisée pour lire une ligne de texte à partir de la console. Elle renvoie une chaîne de caractères.</p>
+
+                    <pre><code class="csharp">
+string input = Console.ReadLine();
+</code></pre>
+
+                    <p><strong>2. Conversion de Chaînes en Types :</strong></p>
+                    <p>Les données lues avec `Console.ReadLine()` sont généralement des chaînes. Pour les utiliser comme d'autres types de données (int, double, etc.), une conversion est nécessaire.</p>
+
+                    <pre><code class="csharp">
+string input = Console.ReadLine();
+int nombre = Convert.ToInt32(input);
+</code></pre>
+
+                    <p><strong>3. Console.ReadKey() :</strong></p>
+                    <p>La méthode `Console.ReadKey()` est utilisée pour lire une seule touche de la console sans attendre qu'une nouvelle ligne soit entrée. Elle renvoie un objet de type `ConsoleKeyInfo`.</p>
+
+                    <pre><code class="csharp">
+ConsoleKeyInfo keyInfo = Console.ReadKey();
+char touche = keyInfo.KeyChar;
+</code></pre>
+
+                    <p><strong>4. Console.WriteLine() :</strong></p>
+                    <p>La méthode `Console.WriteLine()` est utilisée pour afficher du texte dans la console, suivi d'un retour à la ligne.</p>
+
+                    <pre><code class="csharp">
+Console.WriteLine("Bonjour, monde!");
+</code></pre>
+
+
+                </div>
+
+
+                <div id="page12" class="page">
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quelle méthode est utilisée pour lire une ligne de texte à partir de la console en C#?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> Console.ReadKey()</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> Console.WriteLine()</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> Console.ReadLine()</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment convertit-on une chaîne en un entier en C#?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> int.Parse()</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> Convert.ToInt32()</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> double.Parse()</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle méthode est utilisée pour lire une seule touche de la console en C#?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Console.ReadLine()</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Console.ReadKey()</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Console.WriteLine()</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quel type de données renvoie la méthode Console.ReadKey()?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> int</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> string</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> ConsoleKeyInfo</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle méthode est utilisée pour afficher du texte suivi d'un retour à la ligne dans la console en C#?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Console.ReadLine()</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Console.WriteLine()</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Console.ReadKey()</label><br>
+                    </div>
+                </div>
+
+                <div id="page13" class="page">
+                    <div id="finalResult d-flex flex-column justify-content-center pr-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                                    <h1>Quiz 1</h1>
+                                    <h2 id="note_quiz1"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                                    <h1>Quiz 2</h1>
+                                    <h2 id="note_quiz2"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                                    <h1>Quiz 3</h1>
+                                    <h2 id="note_quiz3"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                                    <h1>Quiz 4</h1>
+                                    <h2 id="note_quiz4"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                                    <h1>Quiz 5</h1>
+                                    <h2 id="note_quiz5"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                                    <h1>Quiz 6</h1>
+                                    <h2 id="note_quiz6"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+                                <h1>Note</h1>
+                                <h2 id="note_finale"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div>
+                <br /><br />
+                <nav id="SP" aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+                        <li class="page-item"><a style="background-color: #6f2dbd" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+                    </ul>
+                </nav>
+                <div id="certificatButton" style="display: none;">
+                    <button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+function generateCertificate() {
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+const fullName = "@Model.FirstName " + "@Model.LastName";
+const note = showResultsPage();
+
+// Définir la mise en page verticale
+
+doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+// Dessiner un rectangle coloré (1 cm de largeur)
+doc.rect(10, 10, 189, 277, 'FD');
+
+// Ajouter des informations utilisateur
+doc.setFontSize(20);
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+doc.setFontSize(16);
+doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+doc.setFontSize(18);
+doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+doc.text(fullName, 105, 70, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.setFontSize(14);
+doc.text('Has successfully completed Csharp Tutorial', 105, 100, { align: 'center' });
+
+doc.setFontSize(16);
+doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+// Ajouter d'autres  informations selon vos besoins
+doc.setFontSize(14);
+doc.text('With a degree of ', 105, 135, { align: 'center' });
+doc.setFontSize(14);
+doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.setFontSize(16);
+doc.text('Director', 105, 180, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.text('Associate Professor', 105, 210, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+doc.setFontSize(12);
+doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+// Télécharger le PDF
+doc.save("Certificate.pdf");
+}
+
+
+
+var currentPage = 1;
+var totalPages = 13;
+
+function showPage(pageId) {
+// Masquer toutes les pages
+var pages = document.getElementsByClassName('page');
+for (var i = 0; i < pages.length; i++) {
+pages[i].style.display = 'none';
+}
+
+// Afficher la page spécifique
+var pageToShow = document.getElementById(pageId);
+if (pageToShow) {
+pageToShow.style.display = 'block';
+}
+}
+
+function showPreviousPage() {
+if (currentPage > 1) {
+currentPage--;
+showPage('page' + currentPage);
+}
+var title0 = document.getElementById('title' + (currentPage + 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#6f2dbd';
+
+}
+
+function showNextPage() {
+if (currentPage < 12) {
+currentPage++;
+showPage('page' + currentPage);
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#6f2dbd';
+
+} else {
+currentPage++;
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+title0.style.color = '#2a2e34';
+title.style.color = '#ef233c';
+showResultsPage();
+showCertificatButton()
+}
+
+}
+
+function showCertificatButton() {
+// Masquer la pagination
+var pagination = document.getElementById('SP');
+if (pagination) {
+pagination.style.display = 'none';
+}
+
+// Afficher le bouton "Résultat"
+var resultsButton = document.getElementById('certificatButton');
+if (resultsButton) {
+resultsButton.style.display = 'block';
+}
+}
+
+
+
+function showResultsPage() {
+// Masquer toutes les pages
+showPage('page13');
+var correctAnswersPages = [
+// quiz1
+[
+[0, 0, 1],
+[0, 1, 0],
+[1, 0, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+// quiz2
+[
+[0, 0, 1],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+//quiz3
+[
+[0, 1, 0],
+[1, 0],
+[1, 0],
+[0, 1],
+[1, 0]
+],
+//quiz4
+[
+[1, 0, 0],
+[0, 1, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 0, 3]
+],
+//quiz5
+[
+[0, 1, 0],
+[0, 0, 1],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0]
+],
+//quiz6
+[
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 1, 0]
+]
+
+]
+
+var pages = [2, 4, 6, 8, 10, 12];
+// pour comparer les resultat
+var totalQuestions = 5; // Le nombre total de questions par page
+var totalScore = 0; // Le score total de l'utilisateur
+
+for (let i = 0; i < pages.length; i++) {
+var pageId = 'page' + pages[i];
+var userResponses = extractUserResponses(pageId);
+var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+var pageScore = 0; // Score de la page actuelle
+
+for (let j = 0; j < totalQuestions; j++) {
+var isQuestionCorrect = true;
+
+// Comparer chaque réponse de l'utilisateur avec la réponse correcte
+for (let k = 0; k < userResponses[j].length; k++) {
+    if (userResponses[j][k] !== correctAnswers[j][k]) {
+        isQuestionCorrect = false;
+        break;
+    }
+}
+
+if (isQuestionCorrect) {
+    pageScore++;
+}
+}
+
+totalScore += pageScore;
+var noteId = 'note_quiz' + (i + 1);
+document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+}
+
+var noteFinale = document.getElementById('note_finale');
+noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+return totalScore;
+}
+
+
+
+
+
+function extractUserResponses(pageId) {
+var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+var userResponses = [];
+
+for (let i = 0; i < quizQuestions.length; i++) {
+var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+var choices = [];
+
+checkboxes.forEach(function (checkbox) {
+choices.push(checkbox.checked ? 1 : 0);
+});
+
+userResponses.push(choices);
+}
+
+return userResponses;
+}
+
+
+
+// Appeler showPage avec l'identifiant de la première page lors du chargement initial
+document.addEventListener("DOMContentLoaded", function () {
+showPage('page1');
+});</script>
+
+<br />
+<br />
+<br />

@@ -1,0 +1,74 @@
+﻿<!-- Login.cshtml -->
+@model Toturials.Models.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/logo.css" />
+    <!-- Ajoutez la référence à Bootstrap depuis wwwroot -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <img src="~/images/bg11.jpg" class="img-fluid rounded shadow" alt="Background Image" />
+            </div>
+            <div class="col">
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "needs-validation", novalidate = "true" }))
+                {
+                    <div id="logo-container">
+                        <div class="text-center" id="logo">ProTutoria</div>
+                    </div>
+
+                    <h2 class="text-center mb-4  ">Explore, Learn, Succeed</h2>
+                    <p class="text-center">Welcome to ProTutoria, where knowledge meets innovation. Log in to access our rich collection of tutorials and elevate your learning experience.</p>
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Email", required = "required" })
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3">
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-12 mb-3 d-flex justify-content-center w-75 mx-auto">
+                            <input type="submit" class="btn btn-primary btn-block" value="Login" />
+                        </div>
+
+                    </div>
+                }
+
+                <!-- Ajoutez un lien pour afficher la fenêtre modale d'inscription -->
+                <div class="text-center">
+                    <p class="text-center"> New here? Join us by creating your account below.</p>
+                    <a href="@Url.Action("SignUp", "Account")">Create Account</a>
+                </div>
+                <div class="col-12" id="message">
+                    @{
+                        var errorMessage = TempData["ErrorMessage"] as string;
+                    }
+
+
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger">@errorMessage</div>
+                    }
+                </div>
+        </div>
+    </div>
+
+
+    <!-- Ajoutez la référence à Bootstrap JS depuis wwwroot -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

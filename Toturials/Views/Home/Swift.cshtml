@@ -1,0 +1,1098 @@
+﻿@{
+    Layout = "~/Views/Shared/Header.cshtml";
+    ViewData["Title"] = "Header";
+}
+<style>
+    h3 {
+        color: #2a2e34;
+    }
+
+    h1 {
+        color: #f1faee;
+    }
+
+    #hood {
+        background-color: #ef6351;
+    }
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+    #note_quiz {
+        background-color: #d4a373;
+    }
+</style>
+<br />
+<br />
+<br />
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>Swift Tutorial</h1></div>
+<div class="pt-5">
+    <div class="row ">
+        <div class="col-4 d-flex flex-column align-items-center text-left">
+            <div class="p-5" style="color:#2a2e34; ">
+                <ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+                    <li class="text-left mb-3 fs-2 text-lg" style="color: #ef6351;" id="title1"> Variables & Constants</li>
+                    <li class="text-left fs-2  mb-3" id="title2">Quiz 1</li>
+                    <li class="text-left fs-2 mb-3" id="title3">Types</li>
+                    <li class="text-left fs-2 mb-3" id="title4">Quiz 2</li>
+                    <li class="text-left fs-2 mb-3" id="title5">Functions & Parameters</li>
+                    <li class="text-left fs-2 mb-3" id="title6">Quiz 3</li>
+                    <li class="text-left fs-2 mb-3" id="title7">Classes & Structs</li>
+                    <li class="text-left fs-2 mb-3" id="title8">Quiz 4</li>
+                    <li class="text-left fs-2 mb-3" id="title9">Loops</li>
+                    <li class="text-left fs-2 mb-3" id="title10">Quiz 5</li>
+                    <li class="text-left fs-2 mb-3" id="title11">Optionals & Unwrapping</li>
+                    <li class="text-left fs-2 mb-3" id="title12">Quiz 6</li>
+                    <li class="text-left fs-2 mb-3" id="title13">Certification</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="col ">
+            <div id="content-container d-flex flex-column justify-content-center">
+
+                <div id="page1" class="page">
+                    <h2> Variables & Constants</h2> <br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xKf6iNilRYI?si=GKg2zx-HtJQffy2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div><br />
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Déclaration de Variables :</strong></p>
+                    <p>En Swift, les variables sont déclarées avec le mot-clé <code>var</code>. Leur valeur peut être modifiée après leur initialisation.</p>
+
+                    <pre><code class="swift">
+        var nomVariable = "Valeur de la variable"
+    </code></pre>
+
+                    <p><strong>2. Déclaration de Constantes :</strong></p>
+                    <p>Les constantes sont déclarées avec le mot-clé <code>let</code>. Leur valeur ne peut pas être modifiée après leur initialisation.</p>
+
+                    <pre><code class="swift">
+        let nomConstante = 42
+    </code></pre>
+
+                    <p><strong>3. Types de Données :</strong></p>
+                    <p>Swift est un langage fortement typé. Les types de données peuvent être spécifiés lors de la déclaration ou inférés par le compilateur.</p>
+
+                    <pre><code class="swift">
+        var entier: Int = 10
+        var texte: String = "Hello, Swift!"
+    </code></pre>
+
+                    <p><strong>4. Interpolation de Chaînes :</strong></p>
+                    <p>L'interpolation de chaînes permet d'inclure des variables ou des constantes dans une chaîne.</p>
+
+                    <pre><code class="swift">
+        let age = 25
+        let message = "J'ai \(age) ans."
+    </code></pre>
+
+                    <p><strong>5. Optionnels :</strong></p>
+                    <p>En Swift, un optionnel est une variable qui peut contenir une valeur ou être nul (nil).</p>
+
+                    <pre><code class="swift">
+        var valeurOptionnelle: Int? = 10
+    </code></pre>
+
+
+                </div>
+
+
+                <div id="page2" class="page ">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une variable en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> var x = 10;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> let x = 10;</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> const x = 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la différence entre une variable et une constante en Swift?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> Une variable peut être modifiée après son initialisation, une constante ne peut pas.</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> Une variable est déclarée avec <code>var</code>, une constante avec <code>let</code>.</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> Il n'y a pas de différence.</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment déclare-t-on une constante avec un type spécifié en Swift?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> let valeur: String = "Hello";</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> const valeur = "Hello";</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> const valeur: String = "Hello";</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment utilisez-vous l'interpolation de chaînes en Swift?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> let message = "J'ai \(age) ans.";</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> let message = "J'ai {age} ans.";</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> let message = "J'ai $age ans.";</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Qu'est-ce qu'un optionnel en Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Une variable qui ne peut pas être nulle.</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Une constante qui peut être modifiée.</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Une variable qui peut contenir une valeur ou être nulle.</label><br>
+                    </div>
+
+                </div>
+
+                <div id="page3" class="page">
+                    <h2> Types</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/48v8FH46mQs?si=cqfKZtBGcKiDBqb1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé </h3>
+
+                    <p><strong>1. Types Fondamentaux :</strong></p>
+                    <p>Swift prend en charge différents types de données fondamentaux tels que <code>Int</code> pour les entiers, <code>Double</code> et <code>Float</code> pour les nombres à virgule flottante, et <code>Bool</code> pour les valeurs booléennes.</p>
+
+                    <pre><code class="swift">
+        var entier: Int = 42
+        var reel: Double = 3.14
+        var booleen: Bool = true
+    </code></pre>
+
+                    <p><strong>2. Types de Chaînes :</strong></p>
+                    <p>Les chaînes de caractères en Swift sont représentées par le type <code>String</code>. Elles peuvent être concaténées et interpolées.</p>
+
+                    <pre><code class="swift">
+        var prenom: String = "John"
+        var nom: String = "Doe"
+        var nomComplet = prenom + " " + nom
+    </code></pre>
+
+                    <p><strong>3. Types de Collections :</strong></p>
+                    <p>Swift propose des types de collections tels que les tableaux (<code>Array</code>), les ensembles (<code>Set</code>) et les dictionnaires (<code>Dictionary</code>).</p>
+
+                    <pre><code class="swift">
+        var tableau: [Int] = [1, 2, 3]
+        var ensemble: Set<String> = ["A", "B", "C"]
+        var dictionnaire: [String: Int] = ["un": 1, "deux": 2, "trois": 3]
+    </code></pre>
+
+                    <p><strong>4. Optionnels :</strong></p>
+                    <p>Les optionnels en Swift représentent la possibilité qu'une variable puisse être nulle (<code>nil</code>). Ils sont utiles pour traiter l'absence de valeur de manière sûre.</p>
+
+                    <pre><code class="swift">
+        var valeurOptionnelle: Int? = 10
+    </code></pre>
+
+                    <p><strong>5. Conversion de Types :</strong></p>
+                    <p>Swift permet de convertir explicitement un type en un autre à l'aide de l'opérateur de conversion (<code>as</code>).</p>
+
+                    <pre><code class="swift">
+        var entierConverti: Double = Double(entier)
+    </code></pre>
+
+
+                </div>
+
+
+                <div id="page4" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quel type de données est utilisé pour représenter les entiers en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> Int</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> Float</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> String</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment déclare-t-on une chaîne de caractères en Swift?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> let texte: String = "Hello";</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> var texte = "Hello";</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> const texte = "Hello";</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quel est le type de données utilisé pour représenter un ensemble de valeurs uniques en Swift?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Array</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Set</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Dictionary</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment déclare-t-on un optionnel en Swift?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> var valeurOptionnelle: Optional&lt;Int&gt; = 10;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> var valeurOptionnelle: Int? = 10;</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> var valeurOptionnelle: Nullable&lt;Int&gt; = 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Comment convertit-on un entier en un nombre à virgule flottante en Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> entier.toFloat();</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Double(entier);</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> entier as Double;</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page5" class="page">
+                    <h2>  Functions & Parameters </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fffG55Ei1Qc?si=fl3zw8J13PSi2dKv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Déclaration de Fonction :</strong></p>
+                    <p>En Swift, les fonctions sont déclarées avec le mot-clé <code>func</code>. Elles peuvent avoir un nom, des paramètres et un type de retour.</p>
+
+                    <pre><code class="swift">
+        func direBonjour() {
+            print("Bonjour!")
+        }
+    </code></pre>
+
+                    <p><strong>2. Paramètres de Fonction :</strong></p>
+                    <p>Les fonctions peuvent accepter des paramètres qui permettent de passer des valeurs lors de l'appel de la fonction. Les paramètres ont un nom et un type.</p>
+
+                    <pre><code class="swift">
+        func saluer(nom: String) {
+            print("Bonjour, \(nom)!")
+        }
+    </code></pre>
+
+                    <p><strong>3. Valeurs par Défaut :</strong></p>
+                    <p>Les paramètres peuvent avoir des valeurs par défaut, ce qui rend leur spécification facultative lors de l'appel de la fonction.</p>
+
+                    <pre><code class="swift">
+        func multiplier(nombre: Int, par facteur: Int = 2) -> Int {
+            return nombre * facteur
+        }
+    </code></pre>
+
+                    <p><strong>4. Retour de Fonction :</strong></p>
+                    <p>Les fonctions peuvent retourner une valeur en utilisant le mot-clé <code>return</code>. Le type de retour est spécifié après la flèche (->).</p>
+
+                    <pre><code class="swift">
+        func additionner(a: Int, b: Int) -> Int {
+            return a + b
+        }
+    </code></pre>
+
+                    <p><strong>5. Fonctions avec Variadic Parameters :</strong></p>
+                    <p>Les fonctions peuvent accepter un nombre variable de paramètres en utilisant la notation variadique (<code>...</code>).</p>
+
+                    <pre><code class="swift">
+        func sommeVariadique(_ nombres: Int...) -> Int {
+            return nombres.reduce(0, +)
+        }
+    </code></pre>
+
+                </div>
+
+
+                <div id="page6" class="page">
+
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une fonction en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> function direBonjour() {};</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> func sayHello() {};</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> def direBonjour() {};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment spécifie-t-on un paramètre dans une fonction Swift?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> func additionner(a, b) {};</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> func add(a: Int, b: Int) {};</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> function ajouter(a, b) {};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la fonction de la valeur par défaut dans un paramètre?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Spécifie le type du paramètre.</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Rend le paramètre facultatif lors de l'appel de la fonction.</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Fournit une valeur initiale au paramètre.</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment spécifie-t-on le type de retour d'une fonction en Swift?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> def additionner(a: Int, b: Int) {};</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> func add(a: Int, b: Int) -&gt; Int {};</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> function ajouter(a: Int, b: Int): Int {};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Qu'est-ce que la notation variadique (<code>...</code>) dans une fonction Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Elle permet de déclarer des variables multiples dans une seule ligne.</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Elle indique que la fonction peut accepter un nombre variable de paramètres.</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Elle spécifie le type de retour de la fonction.</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page7" class="page">
+                    <h2>Classes & Structs</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ys3dPSKssgk?si=46p3F1QlbeXoN17E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+                    <p><strong>1. Déclaration de Classe :</strong></p>
+                    <p>En Swift, une classe est déclarée avec le mot-clé <code>class</code>. Elle peut avoir des propriétés, des méthodes et des initialiseurs.</p>
+
+                    <pre><code class="swift">
+        class Personne {
+            var nom: String
+            var age: Int
+
+            init(nom: String, age: Int) {
+                self.nom = nom
+                self.age = age
+            }
+
+            func sePresenter() {
+                print("Je m'appelle \(nom) et j'ai \(age) ans.")
+            }
+        }
+    </code></pre>
+
+                    <p><strong>2. Instance de Classe :</strong></p>
+                    <p>Les instances de classe sont créées en utilisant le mot-clé <code>let</code> ou <code>var</code>, suivi du nom de la classe et des parenthèses.</p>
+
+                    <pre><code class="swift">
+        let personne1 = Personne(nom: "Alice", age: 25)
+        personne1.sePresenter()
+    </code></pre>
+
+                    <p><strong>3. Déclaration de Struct :</strong></p>
+                    <p>Une structure (struct) est similaire à une classe mais est une valeur de type. Elle est déclarée avec le mot-clé <code>struct</code>.</p>
+
+                    <pre><code class="swift">
+        struct Point {
+            var x: Double
+            var y: Double
+        }
+    </code></pre>
+
+                    <p><strong>4. Propriétés Computed :</strong></p>
+                    <p>Les propriétés computed sont des propriétés dont la valeur est calculée à la volée à partir d'autres propriétés.</p>
+
+                    <pre><code class="swift">
+        class Cercle {
+            var rayon: Double
+
+            var diametre: Double {
+                return rayon * 2
+            }
+        }
+    </code></pre>
+
+                    <p><strong>5. Héritage :</strong></p>
+                    <p>Les classes peuvent hériter des propriétés et des méthodes d'une autre classe en utilisant le mot-clé <code>class</code>.</p>
+
+                    <pre><code class="swift">
+        class Etudiant: Personne {
+            var niveau: String
+
+            init(nom: String, age: Int, niveau: String) {
+                self.niveau = niveau
+                super.init(nom: nom, age: age)
+            }
+        }
+    </code></pre>
+
+
+                </div>
+
+
+                <div id="page8" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une classe en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> struct MaClasse {};</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> class MaClasse {};</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> protocol MaClasse {};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment crée-t-on une instance de classe en Swift?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> let instance = MaClasse();</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> var instance = new MaClasse();</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> create instance MaClasse;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la principale différence entre une classe et une struct en Swift?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Les structs ne peuvent pas avoir de méthodes.</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Les classes sont des types de valeur, tandis que les structs sont des types de référence.</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Les structs ne peuvent pas avoir de propriétés.</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment hérite-t-on d'une classe en Swift?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> class SousClasse: ClasseMere {};</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> subclass SousClasse from ClasseMere;</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> extend SousClasse with ClasseMere {};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Qu'est-ce qu'une propriété computed en Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Une propriété qui ne peut pas être modifiée après sa création.</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Une propriété dont la valeur est calculée à partir d'autres propriétés.</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Une propriété qui n'a pas de valeur par défaut.</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page9" class="page">
+                    <h2>Loops</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8Z0mImrIITA?si=nynUtFBHhmLZXiv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Boucle For-In :</strong></p>
+                    <p>La boucle <code>for-in</code> est utilisée pour itérer sur des collections telles que des tableaux, des dictionnaires, des plages, etc.</p>
+
+                    <pre><code class="swift">
+        let tableau = [1, 2, 3, 4, 5]
+        for element in tableau {
+            print(element)
+        }
+    </code></pre>
+
+                    <p><strong>2. Boucle While :</strong></p>
+                    <p>La boucle <code>while</code> s'exécute tant qu'une condition est vraie.</p>
+
+                    <pre><code class="swift">
+        var compteur = 0
+        while compteur < 5 {
+            print(compteur)
+            compteur += 1
+        }
+    </code></pre>
+
+                    <p><strong>3. Boucle Repeat-While :</strong></p>
+                    <p>La boucle <code>repeat-while</code> est similaire à <code>do-while</code> dans d'autres langages. Elle s'exécute au moins une fois et répète tant qu'une condition est vraie.</p>
+
+                    <pre><code class="swift">
+        var index = 0
+        repeat {
+            print(index)
+            index += 1
+        } while index < 3
+    </code></pre>
+
+                    <p><strong>4. Contrôle de Boucle :</strong></p>
+                    <p>Les instructions <code>break</code> et <code>continue</code> sont utilisées pour contrôler le flux d'exécution d'une boucle.</p>
+
+                    <pre><code class="swift">
+        for nombre in 1...10 {
+            if nombre == 5 {
+                break // Sort de la boucle lorsque nombre atteint 5
+            }
+            print(nombre)
+        }
+    </code></pre>
+
+                    <p><strong>5. Utilisation de Labels :</strong></p>
+                    <p>Les boucles peuvent être étiquetées pour permettre un contrôle plus précis lors de l'utilisation de <code>break</code> et <code>continue</code>.</p>
+
+                    <pre><code class="swift">
+        externe: for i in 1...3 {
+            interne: for j in 1...3 {
+                if j == 2 {
+                    break externe // Sort de la boucle externe lorsque j atteint 2
+                }
+                print("(\(i), \(j))")
+            }
+        }
+    </code></pre>
+
+
+                </div>
+
+
+                <div id="page10" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment itère-t-on sur les éléments d'un tableau en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> for element in tableau { }</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> while element in tableau { }</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> iterate tableau { }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle boucle s'exécute tant qu'une condition est vraie?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> for-in</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> while</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> repeat-while</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle boucle s'exécute au moins une fois et répète tant qu'une condition est vraie?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> for-in</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> while</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> repeat-while</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment sortir d'une boucle prématurément en Swift?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> break</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> exit</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> stop</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> À quoi servent les étiquettes dans une boucle en Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> À déclarer des variables.</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> À créer des commentaires.</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> À contrôler le flux avec break et continue.</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page11" class="page">
+                    <h2>Optionals & Unwrapping</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9K89xEuSiYA?si=e-Pr6fFAvrgOkfvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+
+                    <p><strong>1. Optionals :</strong></p>
+                    <p>En Swift, un optional est une variable qui peut contenir une valeur ou être <code>nil</code> (vide).</p>
+
+                    <pre><code class="swift">
+        var age: Int?
+        age = 25
+        // Ou
+        age = nil
+    </code></pre>
+
+                    <p><strong>2. Unwrapping Optionals :</strong></p>
+                    <p>Le processus d'extraction de la valeur d'un optional est appelé unwrapping. Il existe plusieurs façons de le faire :</p>
+
+                    <pre><code class="swift">
+        // 2.1 Forced Unwrapping
+        let valeurForcée: Int? = 42
+        let unwrappedForcé = valeurForcée!
+
+        // 2.2 Optional Binding
+        if let unwrappedBinding = valeurForcée {
+            // Utilisation de unwrappedBinding ici
+        }
+
+        // 2.3 Guard Statement
+        guard let unwrappedGuard = valeurForcée else {
+            // Gestion de nil ici
+            return
+        }
+
+        // 2.4 Nil Coalescing Operator
+        let valeurCoalescente = valeurForcée ?? 0
+    </code></pre>
+
+                    <p><strong>3. Optional Chaining :</strong></p>
+                    <p>Optional chaining permet d'appeler des propriétés, des méthodes et de souscrire à des subscript sur un optional qui pourrait être actuellement nul.</p>
+
+                    <pre><code class="swift">
+        let longueurDuNom = nomOptionnel?.count
+    </code></pre>
+
+                    <p><strong>4. Implicitly Unwrapped Optionals :</strong></p>
+                    <p>Certains optionals sont déclarés comme implicitement unwrapped avec le symbole <code>!</code>.</p>
+
+                    <pre><code class="swift">
+        var ageImplicite: Int! = 30
+        let somme = ageImplicite + 5
+    </code></pre>
+
+                    <p><strong>5. Utilisation Responsable des Optionals :</strong></p>
+                    <p>Il est important de vérifier si un optional contient une valeur avant de l'utiliser pour éviter les crashes de l'application.</p>
+
+
+
+                </div>
+
+
+                <div id="page12" class="page">
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Qu'est-ce qu'un optional en Swift?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> Une valeur obligatoire.</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> Une valeur qui peut être vide (nil).</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> Une fonction en Swift.</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quel est le processus d'extraction de la valeur d'un optional?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> Unwrapping</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> Binding</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> Coalescing</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la méthode de unwrapping qui utilise le symbole '!'?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Forced Unwrapping</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Optional Binding</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Nil Coalescing Operator</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quelle déclaration indique un Implicitly Unwrapped Optional?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> var number: Int</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> var number: Int?</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> var number: Int!</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est l'utilité de l'Optional Chaining en Swift?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Permet de créer des chaînes de caractères optionnelles.</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Permet d'appeler des propriétés ou des méthodes sur un optional qui pourrait être nul.</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Permet de forcer le déballage d'un optional.</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page13" class="page">
+                    <div id="finalResult d-flex flex-column justify-content-center pr-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                                    <h1>Quiz 1</h1>
+                                    <h2 id="note_quiz1"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                                    <h1>Quiz 2</h1>
+                                    <h2 id="note_quiz2"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                                    <h1>Quiz 3</h1>
+                                    <h2 id="note_quiz3"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                                    <h1>Quiz 4</h1>
+                                    <h2 id="note_quiz4"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                                    <h1>Quiz 5</h1>
+                                    <h2 id="note_quiz5"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                                    <h1>Quiz 6</h1>
+                                    <h2 id="note_quiz6"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+                                <h1>Note</h1>
+                                <h2 id="note_finale"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div>
+                <br /><br />
+                <nav id="SP" aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+                        <li class="page-item"><a style="background-color: #ef6351" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+                    </ul>
+                </nav>
+                <div id="certificatButton" style="display: none;">
+                    <button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+    function generateCertificate() {
+        const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const fullName = "@Model.FirstName " + "@Model.LastName";
+    const note = showResultsPage();
+
+    // Définir la mise en page verticale
+
+        doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+        doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+        // Dessiner un rectangle coloré (1 cm de largeur)
+        doc.rect(10, 10, 189, 277, 'FD');
+
+    // Ajouter des informations utilisateur
+    doc.setFontSize(20);
+    doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+        doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+        doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+    doc.setFontSize(16);
+    doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+        doc.setFontSize(18);
+        doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+    doc.text(fullName, 105, 70, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+    doc.setFontSize(14);
+    doc.text('Has successfully completed Swift Tutorial', 105, 100, { align: 'center' });
+
+    doc.setFontSize(16);
+    doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+    // Ajouter d'autres  informations selon vos besoins
+    doc.setFontSize(14);
+        doc.text('With a degree of ', 105, 135, { align: 'center' });
+        doc.setFontSize(14);
+        doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+        doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+    doc.setFontSize(16);
+        doc.text('Director', 105, 180, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+        doc.text('Associate Professor', 105, 210, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+    doc.setFontSize(12);
+        doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+        doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+    doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+    // Télécharger le PDF
+    doc.save("Certificate.pdf");
+    }
+
+
+
+    var currentPage = 1;
+    var totalPages = 13;
+
+    function showPage(pageId) {
+        // Masquer toutes les pages
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+
+        // Afficher la page spécifique
+        var pageToShow = document.getElementById(pageId);
+        if (pageToShow) {
+            pageToShow.style.display = 'block';
+        }
+    }
+
+    function showPreviousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage('page' + currentPage);
+        }
+        var title0 = document.getElementById('title' + (currentPage + 1));
+        var title = document.getElementById('title' + currentPage);
+
+        title0.style.color = '#2a2e34';
+        title.style.color = '#ef6351';
+
+    }
+
+    function showNextPage() {
+        if (currentPage < 12) {
+            currentPage++;
+            showPage('page' + currentPage);
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+
+            title0.style.color = '#2a2e34';
+            title.style.color = '#ef6351';
+
+        } else {
+            currentPage++;
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+            title0.style.color = '#2a2e34';
+            title.style.color = '#ef233c';
+            showResultsPage();
+            showCertificatButton()
+        }
+
+    }
+
+    function showCertificatButton() {
+        // Masquer la pagination
+        var pagination = document.getElementById('SP');
+        if (pagination) {
+            pagination.style.display = 'none';
+        }
+
+        // Afficher le bouton "Résultat"
+        var resultsButton = document.getElementById('certificatButton');
+        if (resultsButton) {
+            resultsButton.style.display = 'block';
+        }
+    }
+
+
+
+    function showResultsPage() {
+        // Masquer toutes les pages
+        showPage('page13');
+        var correctAnswersPages = [
+            // quiz1
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [1, 0, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            // quiz2
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            //quiz3
+            [
+                [0, 1, 0],
+                [1, 0],
+                [1, 0],
+                [0, 1],
+                [1, 0]
+            ],
+            //quiz4
+            [
+                [1, 0, 0],
+                [0, 1, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 0, 3]
+            ],
+            //quiz5
+            [
+                [0, 1, 0],
+                [0, 0, 1],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0]
+            ],
+            //quiz6
+            [
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 1, 0]
+            ]
+
+        ]
+
+        var pages = [2, 4, 6, 8, 10, 12];
+        // pour comparer les resultat
+        var totalQuestions = 5; // Le nombre total de questions par page
+        var totalScore = 0; // Le score total de l'utilisateur
+
+        for (let i = 0; i < pages.length; i++) {
+            var pageId = 'page' + pages[i];
+            var userResponses = extractUserResponses(pageId);
+            var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+            var pageScore = 0; // Score de la page actuelle
+
+            for (let j = 0; j < totalQuestions; j++) {
+                var isQuestionCorrect = true;
+
+                // Comparer chaque réponse de l'utilisateur avec la réponse correcte
+                for (let k = 0; k < userResponses[j].length; k++) {
+                    if (userResponses[j][k] !== correctAnswers[j][k]) {
+                        isQuestionCorrect = false;
+                        break;
+                    }
+                }
+
+                if (isQuestionCorrect) {
+                    pageScore++;
+                }
+            }
+
+            totalScore += pageScore;
+            var noteId = 'note_quiz' + (i + 1);
+            document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+        }
+
+        var noteFinale = document.getElementById('note_finale');
+        noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+        return totalScore;
+    }
+
+
+
+
+
+    function extractUserResponses(pageId) {
+        var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+        var userResponses = [];
+
+        for (let i = 0; i < quizQuestions.length; i++) {
+            var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+            var choices = [];
+
+            checkboxes.forEach(function (checkbox) {
+                choices.push(checkbox.checked ? 1 : 0);
+            });
+
+            userResponses.push(choices);
+        }
+
+        return userResponses;
+    }
+
+
+
+    // Appeler showPage avec l'identifiant de la première page lors du chargement initial
+    document.addEventListener("DOMContentLoaded", function () {
+        showPage('page1');
+    });</script>
+
+<br />
+<br />
+<br />

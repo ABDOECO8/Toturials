@@ -1,0 +1,96 @@
+﻿@model Toturials.Models.User
+<!-- SignUp.cshtml -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="~/css/logo.css" />
+    <!-- Ajoutez la référence à Bootstrap depuis wwwroot -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.8463979341736695) 50%, rgba(252,176,69,1) 100%);
+        }
+    </style>
+    <style>
+        .signUpForm {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #signUpForm {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 500px; /* Ajustez la largeur selon vos besoins */
+        }
+    </style>
+</head>
+<body>
+    <div class="d-block" id="logo-container">
+        <div class="text-center" style="color:white;" id="logo">Tutorial</div> <br /><br /><br /><br />
+    </div>
+
+    <div class="container">
+        <div class="col-12" id="message">
+            @{
+                var successMessage = TempData["SuccessMessage"] as string;
+                var errorMessage = TempData["ErrorMessage"] as string;
+            }
+
+            @if (!string.IsNullOrEmpty(successMessage))
+            {
+                <div class="alert alert-success">@successMessage</div>
+            }
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="alert alert-danger">@errorMessage</div>
+            }
+        </div>
+
+        <div  class="col-12 m-auto text-center" id="signUpForm">
+            <h2 class="mb-3">Sign Up</h2>
+            @using (Html.BeginForm("SignUp", "Account", FormMethod.Post))
+            {
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", placeholder = "First Name", required = "required" })
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", placeholder = "Last Name", required = "required" })
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", placeholder = "Email", required = "required" })
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block mt-3 mb-3" value="Create" /><br />
+                <p class="text-secondary text-center mt-3">
+                    back to login page? @Html.ActionLink("Login", "Login", "Account")
+                </p>
+            }
+        </div>
+    </div>
+ 
+
+    <!-- Ajoutez la référence à Bootstrap JS depuis wwwroot -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

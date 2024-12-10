@@ -1,0 +1,11 @@
+﻿#logo-container {
+    background: transparent; /* Fond transparent */
+}
+
+#logo {
+    font-size: 4em;
+    font-weight: bold;
+    color: transparent; /* Texte transparent */
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    -webkit-background-clip: text;
+}

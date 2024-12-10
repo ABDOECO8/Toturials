@@ -1,0 +1,29 @@
+﻿/* Styles Bootstrap et personnalisés ici */
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden; /* Empêcher la barre de défilement horizontale */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-form {
+    flex: 1;
+    margin-left: 20px; /* Ajoutez une marge entre l'image et le formulaire */
+}
+
+.login-container img {
+    height: 100vh; /* Hauteur de la page */
+    width: 60vw; /* Plus de 60% de la largeur de la page */
+    object-fit: cover; /* Pour maintenir les proportions et couvrir l'espace */
+}
+

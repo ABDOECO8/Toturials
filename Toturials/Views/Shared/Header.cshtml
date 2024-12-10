@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/logo.css" />
+    <!-- Ajoutez la référence à Bootstrap depuis wwwroot -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
+    <style>
+        #dropWindow {
+            background: #348F50; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #56B4D3, #348F50); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 15px 50px;
+           
+            padding: 20px;
+            
+        }
+        #header {
+            background: #fff;  /* fallback for old browsers */
+            color:#101318;
+            
+
+        }
+    </style>
+</head>
+<body >
+    <div id="header">
+        <nav class="navbar navbar-expand-lg  shadow d-flex px-5">
+            <a class="text-primary navbar-brand justify-content-start font-weight-bold fs-2"  " href="@Url.Action("Home", "Home")">ProTutoria</a>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="#tutoriat_section">Tutorials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#footer">Contact-Us</a>
+                    </li>
+                    <li class="nav-item pl-3">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <div class="btn-group dropstart px-3">
+
+                                    <img src="~/images/profile-user.png" width="25px;" style="cursor: pointer" alt="userLogo" class="rounded-circle mt-2 pr-5" data-bs-toggle="dropdown" aria-expanded="false" />
+                                    <ul class="dropdown-menu px-5 mt-6" id="dropWindow">
+                                        <div class="d-flex flex-column justify-content-center align-items-center text-center">
+                                            <div>
+                                                <br />
+                                                <img src="/images/profile-user.png" width="70px" alt="userLogo" />
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <h3 class="fs-2 text-dark">Welcome</h3>
+                                                <p class="text-light" id="myName"> @Model.FirstName @Model.LastName</p>
+                                                
+                                                <p class="text-dark fs-3">Email</p>
+                                                <p class="text-light"> @Model.UserName</p>
+                                            </div>
+                                            <br />
+                                            <div>
+                                        <li class="text-decoration-none text-dark"><a class="dropdown-item " href="#"><img src="~/images/settings.svg" width="25px" alt="settings" /> &nbsp;&nbsp;&nbsp;Settings</a></li>
+                                        <br />
+                                        <li class="text-decoration-none text-dark"><a class="dropdown-item " href="@Url.Action("Login", "Account")"><img src="~/images/logOut.svg" width="25px" alt="settings" />&nbsp;&nbsp;&nbsp;LogOut</a></li>
+                                </div>
+                            </div>
+                </ul>
+            </div> 
+                                    <div class="text-dark pt-1"> @Model.UserName</div>
+                                </div>
+                                
+                             </div>
+                        </li>
+                     </ul>
+                </div>
+         </nav>
+    </div>
+
+
+    <div>
+        @RenderBody() <!-- Contenu spécifique de chaque page -->
+    </div>
+    <div id="footer" class="footer-clean bg-light  d-flex flex-column justify-content-center">
+        <br /><br />
+        <div class=" row d-flex flex-row justify-content-center">
+            <div class="col-sm-4 col-md-3 item">
+                <h3>Address</h3>
+                <ul>
+                    <li><a href="#">Morocco, Agadir fonti</a></li>
+
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 item">
+                <h3>Phone</h3>
+                <ul>
+                    <li><a href="#">+212-69823129</a></li>
+
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 item">
+                <h3>Email</h3>
+                <ul>
+                    <li><a href="#"></a>ProTutoria@gmail.com</li>
+
+                </ul>
+            </div>
+
+        </div>
+        <br /><br /><br /><br />
+        <div class=" text-center d-flex flex-column justify-content-center">
+            <div>
+                <a href="https://www.facebook.com"><img src="~/images/facebook.svg" width="40px" alt="facebook" /></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com"><img src="~/images/instagram.svg" width="40px" alt="instagram" /></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.snapchat.com"><img src="~/images/snapchat.svg" width="40px" alt="snapchat" /></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="https://www.twitter.com"><img src="~/images/x-twitter.svg" width="40px" alt="x-twitter" /></a>
+
+            </div>
+            <br />
+            <p class="copyright">ProTutoria © 2023</p>
+        </div>
+
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

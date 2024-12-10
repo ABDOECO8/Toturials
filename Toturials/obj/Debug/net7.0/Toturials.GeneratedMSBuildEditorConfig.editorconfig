@@ -1,0 +1,57 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Toturials
+build_property.RootNamespace = Toturials
+build_property.ProjectDir = /Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Account/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9TaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/Csharp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Dc2hhcnAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/Go.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Hby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Ib21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/JavaScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9KYXZhU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/Python.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9QeXRob24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/Swift.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Td2lmdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Home/TypeScript.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9UeXBlU2NyaXB0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/idriss/Document/info_2/dotNet/projet/Toturials/Toturials/Views/Shared/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

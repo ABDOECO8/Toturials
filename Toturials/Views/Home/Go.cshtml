@@ -1,0 +1,1036 @@
+﻿@{
+    Layout = "~/Views/Shared/Header.cshtml";
+    ViewData["Title"] = "Header";
+}
+<style>
+    h2 {
+        color: #001d3d;
+    }
+
+    h3 {
+        color: #2a2e34;
+    }
+
+    h1 {
+        color: #f1faee;
+    }
+
+    #hood {
+        background-color: #00a8e8;
+    }
+
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+    #note_quiz {
+        background-color: #d4a373;
+    }
+</style>
+<br />
+<br />
+<br />
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>Go Tutorial</h1></div>
+<div class="pt-5">
+    <div class="row ">
+        <div class="col-4 d-flex flex-column align-items-center text-left">
+            <div class="p-5" style="color:#2a2e34; ">
+                <ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+                    <li class="text-left mb-3 fs-3 text-lg" style="color: #00a8e8; " id="title1">Les variables</li>
+                    <li class="text-left fs-3  mb-3" id="title2">Quiz 1</li>
+                    <li class="text-left fs-3 mb-3" id="title3">Les Types</li>
+                    <li class="text-left fs-3 mb-3" id="title4">Quiz 2</li>
+                    <li class="text-left fs-3 mb-3" id="title5">Les Opérateurs</li>
+                    <li class="text-left fs-3 mb-3" id="title6">Quiz 3</li>
+                    <li class="text-left fs-3 mb-3" id="title7"> Les conditions</li>
+                    <li class="text-left fs-3 mb-3" id="title8">Quiz 4</li>
+                    <li class="text-left fs-3 mb-3" id="title9">Tableaux (Arrays) </li>
+                    <li class="text-left fs-3 mb-3" id="title10">Quiz 5</li>
+                    <li class="text-left fs-3 mb-3" id="title11">  Les Boucles</li>
+                    <li class="text-left fs-3 mb-3" id="title12">Quiz 6</li>
+                    <li class="text-left fs-3 mb-3" id="title13">Certification</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="col ">
+            <div id="content-container d-flex flex-column justify-content-center">
+                <div id="page1" class="page">
+                    <h2>Les Variables </h2> <br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/yynB7B5Irx0?si=7ZZ2B7tTNyLIZz_a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div><br />
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Déclaration de Variables :</strong></p>
+                    <p>En Go, les variables sont déclarées en utilisant le mot-clé `var`, suivi du nom de la variable et du type de données.</p>
+
+                    <pre><code class="go">
+            var age int
+            var nom string
+        </code></pre>
+
+                    <p><strong>2. Initialisation de Variables :</strong></p>
+                    <p>Les variables peuvent être initialisées lors de leur déclaration en fournissant une valeur.</p>
+
+                    <pre><code class="go">
+var count int = 10
+var message string = "Hello, Go!"
+</code></pre>
+
+                    <p><strong>3. Inférence de Type :</strong></p>
+                    <p>Go permet l'inférence de type lors de la déclaration et de l'initialisation d'une variable.</p>
+
+                    <pre><code class="go">
+age := 25
+nom := "John Doe"
+</code></pre>
+
+                    <p><strong>4. Constantes :</strong></p>
+                    <p>Les constantes en Go sont déclarées à l'aide du mot-clé `const` et ne peuvent pas être modifiées après leur initialisation.</p>
+
+                    <pre><code class="go">
+const pi = 3.14
+</code></pre>
+
+
+                </div>
+
+
+                <div id="page2" class="page ">
+                    <h3>Quiz</h3>
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une variable en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> int x;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> var x int;</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> x := 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment initialise-t-on une variable en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> x = 10;</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> var x = 10;</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> x := 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la différence entre `var` et `:=` en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Aucune différence, ils sont interchangeables.</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> `var` est utilisé pour la déclaration et `:=` pour l'initialisation.</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> `:=` est utilisé pour la déclaration et `var` pour l'initialisation.</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment déclare-t-on une constante en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> const x = 10;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> x := 10;</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> var x const 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> L'inférence de type en Go permet-elle de déclarer une variable sans spécifier son type?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Oui</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Non</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Dépend du contexte</label><br>
+                    </div>
+
+
+                </div>
+
+                <div id="page3" class="page">
+                    <h2>  Les Types</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/aeWXoEgfvQ8?si=OTUnq6CG4cKkOz54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé </h3>
+
+                    <p><strong>1. Types de Base :</strong></p>
+                    <p>Go propose plusieurs types de données de base, tels que :</p>
+                    <ul>
+                        <li><code>int</code> - entiers signés</li>
+                        <li><code>float64</code> - nombres à virgule flottante</li>
+                        <li><code>bool</code> - valeurs booléennes (true/false)</li>
+                        <li><code>string</code> - chaînes de caractères</li>
+                    </ul>
+
+                    <pre><code class="go">
+var age int
+var prix float64
+var estVrai bool
+var nom string
+</code></pre>
+
+                    <p><strong>2. Types Dérivés :</strong></p>
+                    <p>Go propose également des types dérivés, tels que :</p>
+                    <ul>
+                        <li><code>slice</code> - segment variable d'un tableau</li>
+                        <li><code>map</code> - collection non ordonnée de paires clé-valeur</li>
+                        <li><code>struct</code> - regroupement de champs de données</li>
+                    </ul>
+
+                    <pre><code class="go">
+var scores = []int{90, 85, 88}
+var capitales = map[string]string{"France": "Paris", "Espagne": "Madrid"}
+type Personne struct { Nom string; Age int }
+</code></pre>
+
+                    <p><strong>3. Types Nuls et Complexes :</strong></p>
+                    <p>Go offre des types pour représenter les valeurs nulles (<code>nil</code>) et les nombres complexes.</p>
+
+                    <pre><code class="go">
+var pointeur *int
+var nombreComplexe complex128
+</code></pre>
+                </div>
+
+
+                <div id="page4" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quel type de données est utilisé pour stocker des entiers signés en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> float64</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> int</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> bool</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quel type de données est utilisé pour représenter des nombres à virgule flottante en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> int</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> bool</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> float64</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quel type de données est utilisé pour stocker des valeurs booléennes (true/false) en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> string</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> bool</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> slice</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quel type de données est utilisé pour représenter une collection non ordonnée de paires clé-valeur en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> struct</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> map</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> slice</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quel type de données est utilisé pour représenter les valeurs nulles en Go?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> nil</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> var</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> const</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page5" class="page">
+                    <h2>Les Opérateurs </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pPuj6EBSsUM?si=UwSQoy2ZN_MT5YM_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Opérations Arithmétiques :</strong></p>
+                    <p>Go prend en charge les opérations arithmétiques de base :</p>
+                    <ul>
+                        <li><code>+</code> - Addition</li>
+                        <li><code>-</code> - Soustraction</li>
+                        <li><code>*</code> - Multiplication</li>
+                        <li><code>/</code> - Division</li>
+                        <li><code>%</code> - Modulo (reste de la division)</li>
+                    </ul>
+
+                    <pre><code class="go">
+var resultat = 10 + 5
+var produit = 3 * 4
+var quotient = 20 / 5
+</code></pre>
+
+                    <p><strong>2. Opérations de Comparaison :</strong></p>
+                    <p>Les opérations de comparaison renvoient des valeurs booléennes :</p>
+                    <ul>
+                        <li><code>==</code> - Égal à</li>
+                        <li><code>!=</code> - Différent de</li>
+                        <li><code>&lt;</code> - Inférieur à</li>
+                        <li><code>&gt;</code> - Supérieur à</li>
+                        <li><code>&lt;=</code> - Inférieur ou égal à</li>
+                        <li><code>&gt;=</code> - Supérieur ou égal à</li>
+                    </ul>
+
+                    <pre><code class="go">
+var estEgal = (a == b)
+var estDifferent = (x != y)
+var estSuperieur = (m &gt; n)
+</code></pre>
+
+                    <p><strong>3. Opérations Logiques :</strong></p>
+                    <p>Les opérations logiques sont utilisées avec des valeurs booléennes :</p>
+                    <ul>
+                        <li><code>&amp;&amp;</code> - ET logique</li>
+                        <li><code>||</code> - OU logique</li>
+                        <li><code>!</code> - NON logique</li>
+                    </ul>
+
+                    <pre><code class="go">
+var condition1 = (x &gt; 0) && (y &lt; 10)
+var condition2 = (a == b) || (c != d)
+var nonCondition = !estVrai
+</code></pre>
+
+
+                </div>
+
+
+                <div id="page6" class="page">
+
+                    <h3>Quiz</h3>
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quel opérateur est utilisé pour l'addition en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> &gt;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> +</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> *</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quel opérateur est utilisé pour la division en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> /</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> -</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> %</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quel opérateur est utilisé pour tester l'égalité en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> ==</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> &lt;=</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> &amp;&amp;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quel opérateur logique est utilisé pour le OU en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> &amp;&amp;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> ||</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> !</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quel opérateur est utilisé pour le reste de la division en Go?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> *</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> /</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> %</label><br>
+                    </div>
+
+                </div>
+
+
+                <div id="page7" class="page">
+                    <h2> Les conditions</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/x8sVbQuw8I0?si=ZUIwb-Uez9qewPAl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    <br />
+                    </div>
+                    <h3>Résumé</h3>
+
+
+
+                    <p><strong>1. Structure de Base :</strong></p>
+                    <p>Les structures de contrôle de base pour les conditions en Go sont <code>if</code>, <code>else if</code> et <code>else</code>.</p>
+
+                    <pre><code class="go">
+                if condition {
+                // Bloc de code exécuté si la condition est vraie
+                } else if autreCondition {
+                // Bloc de code exécuté si la première condition est fausse et cette condition est vraie
+                } else {
+                // Bloc de code exécuté si aucune des conditions précédentes n'est vraie
+                }
+                </code></pre>
+
+                    <p><strong>2. Switch :</strong></p>
+                    <p>La structure <code>switch</code> est utilisée pour évaluer différentes conditions en fonction de la valeur d'une expression.</p>
+
+                    <pre><code class="go">
+                    switch expression {
+                    case valeur1:
+                    // Bloc de code exécuté si l'expression est égale à valeur1
+                    case valeur2:
+                    // Bloc de code exécuté si l'expression est égale à valeur2
+                    default:
+                    // Bloc de code exécuté si aucune des valeurs précédentes n'est égale à l'expression
+                    }
+                    </code></pre>
+
+                    <p><strong>3. Opérateur Ternaire :</strong></p>
+                    <p>Go ne dispose pas d'un opérateur ternaire traditionnel, mais on peut utiliser une déclaration <code>if</code> courte.</p>
+
+                    <pre><code class="go">
+                    resultat := if condition { valeur1 } else { valeur2 }
+                </code></pre>
+
+                    <p><strong>4. Opérateurs de Comparaison :</strong></p>
+                    <p>Les opérateurs de comparaison courants sont <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, et <code>&gt;=</code>.</p>
+
+                    <pre><code class="go">
+                            if x == y {
+                                // Bloc de code exécuté si x est égal à y
+                            }
+                        </code></pre>
+
+
+                </div>
+
+
+                <div id="page8" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quelle structure de contrôle est utilisée pour évaluer différentes conditions en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> if-else</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> for</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> switch</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment déclare-t-on une structure <code>switch</code> en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> switch expression { }</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> switch { expression }</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> select expression { }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quel opérateur de comparaison est utilisé pour tester l'égalité en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> ==</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> &lt;</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> !=</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment utilisez-vous un opérateur ternaire en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> resultat = condition ? valeur1 : valeur2;</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> resultat = if condition { valeur1 } else { valeur2 };</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> resultat = condition ? { valeur1 } : { valeur2 };</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est la structure de base pour les conditions en Go?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> if-else</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> switch</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> for</label><br>
+                    </div>
+
+
+                </div>
+
+
+                <div id="page9" class="page">
+                    <h2>Tableaux (Arrays) </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3w9Q_x_Z2n4?si=sGsLeeIJl9IInUZX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <h3>Résumé</h3>
+
+                    <p><strong>1. Déclaration et Initialisation :</strong></p>
+                    <p>Un tableau en Go est une collection ordonnée d'éléments du même type.</p>
+
+                    <pre><code class="go">
+var tableau [5]int          // Déclaration d'un tableau de 5 entiers
+tableau = [5]int{1, 2, 3, 4, 5} // Initialisation du tableau
+</code></pre>
+
+                    <p><strong>2. Accès aux Éléments :</strong></p>
+                    <p>Les éléments d'un tableau sont accessibles par leur indice (commençant par 0).</p>
+
+                    <pre><code class="go">
+element := tableau[2] // Accès à l'élément d'indice 2 (3ème élément)
+</code></pre>
+
+                    <p><strong>3. Longueur d'un Tableau :</strong></p>
+                    <p>La fonction <code>len()</code> est utilisée pour obtenir la longueur d'un tableau.</p>
+
+                    <pre><code class="go">
+longueur := len(tableau) // Donne la longueur du tableau
+</code></pre>
+
+                    <p><strong>4. Boucle For-Range avec Tableau :</strong></p>
+                    <p>La boucle <code>for-range</code> est souvent utilisée pour itérer à travers les éléments d'un tableau.</p>
+
+                    <pre><code class="go">
+for index, valeur := range tableau {
+// Utilisation de l'index et de la valeur
+}
+</code></pre>
+
+                    <p><strong>5. Tableaux Multidimensionnels :</strong></p>
+                    <p>Go prend en charge les tableaux multidimensionnels, notamment les tableaux à deux dimensions.</p>
+
+                    <pre><code class="go">
+var tableau2D [3][3]int // Déclaration d'un tableau 2D de 3x3
+</code></pre>
+                </div>
+
+                <div id="page10" class="page">
+                    <h3>Quiz</h3>
+
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on un tableau en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> var arr []int;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> var arr [5]int;</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> var arr = [5]int;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment initialise-t-on un tableau en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> arr = {1, 2, 3, 4, 5};</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> arr = [1, 2, 3, 4, 5];</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> arr = {1:1, 2:2, 3:3, 4:4, 5:5};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment accède-t-on à l'élément d'indice 2 d'un tableau en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> element = arr(2);</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> element = arr[2];</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> element = arr{2};</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment obtient-on la longueur d'un tableau en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> length(arr);</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> arr.length();</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> len(arr);</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle boucle est souvent utilisée pour itérer à travers les éléments d'un tableau en Go?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> for-each</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> for-in</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> for-range</label><br>
+                    </div>
+
+
+
+                </div>
+
+                <div id="page11" class="page">
+                    <h2>
+                        Les Boucles
+                    </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/TvsiL-Hf3To?si=gXqKIbGKuZKyJQWh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                                <br />
+
+                        <h3>Résumé</h3>
+
+                        <p><strong>1. Boucle For :</strong></p>
+                        <p>La boucle <code>for</code> est utilisée pour répéter l'exécution d'un bloc de code tant qu'une condition est vraie.</p>
+
+                        <pre><code class="go">
+                for i := 0; i &lt; 5; i++ {
+                    // Bloc de code exécuté à chaque itération
+                }
+            </code></pre>
+
+                        <p><strong>2. Boucle While :</strong></p>
+                        <p>En Go, la boucle <code>for</code> peut être utilisée pour créer une boucle <code>while</code> en omettant la partie initiale et post-itérative.</p>
+
+                        <pre><code class="go">
+                n := 0
+                for n &lt; 5 {
+                    // Bloc de code exécuté tant que la condition est vraie
+                    n++
+                }
+            </code></pre>
+
+                        <p><strong>3. Boucle For-Range :</strong></p>
+                        <p>La boucle <code>for-range</code> est utilisée pour itérer à travers des éléments d'une structure de données comme une slice, un tableau, une chaîne, ou une map.</p>
+
+                        <pre><code class="go">
+                tableau := [3]string{"a", "b", "c"}
+                for index, valeur := range tableau {
+                    // Bloc de code exécuté pour chaque élément du tableau
+                }
+            </code></pre>
+
+                        <p><strong>4. Boucle Infinie :</strong></p>
+                        <p>Une boucle infinie peut être créée avec une condition qui est toujours vraie.</p>
+
+                        <pre><code class="go">
+                        for {
+                            // Bloc de code exécuté indéfiniment
+                        }
+                    </code></pre>
+
+
+
+                    </div>
+                </div>
+
+                <div id="page12" class="page">
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment déclare-t-on une boucle for qui s'exécute cinq fois en Go?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> for i := 0; i &lt;= 5; i++ { }</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> for i := 1; i &lt; 6; i++ { }</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> for i := 0; i &lt; 5; i++ { }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment crée-t-on une boucle while en Go?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> while condition { }</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> for condition { }</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> repeat { }</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle boucle est utilisée pour itérer à travers les éléments d'une structure de données en Go?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> for-each</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> for-in</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> for-range</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment crée-t-on une boucle infinie en Go?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> for { }</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> while true { }</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> repeat { }</label><br>
+                    </div>
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Comment utilise-t-on une fonction en tant que type en TypeScript?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> En spécifiant le type avec <code>funcType</code></label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> En utilisant <code>function as type</code></label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> En définissant un type avec la signature de la fonction</label><br>
+                    </div>
+                </div>
+
+                <div id="page13" class="page">
+                    <div id="finalResult d-flex flex-column justify-content-center pr-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                                    <h1>Quiz 1</h1>
+                                    <h2 id="note_quiz1"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                                    <h1>Quiz 2</h1>
+                                    <h2 id="note_quiz2"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                                    <h1>Quiz 3</h1>
+                                    <h2 id="note_quiz3"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                                    <h1>Quiz 4</h1>
+                                    <h2 id="note_quiz4"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                                    <h1>Quiz 5</h1>
+                                    <h2 id="note_quiz5"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                                    <h1>Quiz 6</h1>
+                                    <h2 id="note_quiz6"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+                                <h1>Note</h1>
+                                <h2 id="note_finale"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <br /><br />
+                    <nav id="SP" aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+                            <li class="page-item"><a style="background-color: #00a8e8" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+                        </ul>
+                    </nav>
+                    <div id="certificatButton" style="display: none;">
+                        <button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+ </div>   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script>
+    function generateCertificate() {
+        const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const fullName = "@Model.FirstName " + "@Model.LastName";
+    const note = showResultsPage();
+
+    // Définir la mise en page verticale
+
+        doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+        doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+        // Dessiner un rectangle coloré (1 cm de largeur)
+        doc.rect(10, 10, 189, 277, 'FD');
+
+    // Ajouter des informations utilisateur
+    doc.setFontSize(20);
+    doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+        doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+        doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+    doc.setFontSize(16);
+    doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+        doc.setFontSize(18);
+        doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+    doc.text(fullName, 105, 70, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+    doc.setFontSize(14);
+    doc.text('Has successfully completed Swift Tutorial', 105, 100, { align: 'center' });
+
+    doc.setFontSize(16);
+    doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+    // Ajouter d'autres  informations selon vos besoins
+    doc.setFontSize(14);
+        doc.text('With a degree of ', 105, 135, { align: 'center' });
+        doc.setFontSize(14);
+        doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+        doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+    doc.setFontSize(16);
+        doc.text('Director', 105, 180, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+        doc.text('Associate Professor', 105, 210, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+    doc.setFontSize(12);
+        doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+        doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+    doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+    // Télécharger le PDF
+    doc.save("Certificate.pdf");
+    }
+
+
+
+    var currentPage = 1;
+    var totalPages = 13;
+
+    function showPage(pageId) {
+        // Masquer toutes les pages
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+
+        // Afficher la page spécifique
+        var pageToShow = document.getElementById(pageId);
+        if (pageToShow) {
+            pageToShow.style.display = 'block';
+        }
+    }
+
+    function showPreviousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage('page' + currentPage);
+        }
+        var title0 = document.getElementById('title' + (currentPage + 1));
+        var title = document.getElementById('title' + currentPage);
+
+        title0.style.color = '#2a2e34';
+        title.style.color = '#00a8e8';
+
+    }
+
+    function showNextPage() {
+        if (currentPage < 12) {
+            currentPage++;
+            showPage('page' + currentPage);
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+
+            title0.style.color = '#2a2e34';
+            title.style.color = '#00a8e8';
+
+        } else {
+            currentPage++;
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+            title0.style.color = '#2a2e34';
+            title.style.color = '#ef233c';
+            showResultsPage();
+            showCertificatButton()
+        }
+
+    }
+
+    function showCertificatButton() {
+        // Masquer la pagination
+        var pagination = document.getElementById('SP');
+        if (pagination) {
+            pagination.style.display = 'none';
+        }
+
+        // Afficher le bouton "Résultat"
+        var resultsButton = document.getElementById('certificatButton');
+        if (resultsButton) {
+            resultsButton.style.display = 'block';
+        }
+    }
+
+
+
+    function showResultsPage() {
+        // Masquer toutes les pages
+        showPage('page13');
+        var correctAnswersPages = [
+            // quiz1
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [1, 0, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            // quiz2
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            //quiz3
+            [
+                [0, 1, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 1, 0],
+                [1, 0, 0]
+            ],
+            //quiz4
+            [
+                [1, 0, 0],
+                [0, 1, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 0, 3]
+            ],
+            //quiz5
+            [
+                [0, 1, 0],
+                [0, 0, 1],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0]
+            ],
+            //quiz6
+            [
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 1, 0]
+            ]
+
+        ]
+
+        var pages = [2, 4, 6, 8, 10, 12];
+        // pour comparer les resultat
+        var totalQuestions = 5; // Le nombre total de questions par page
+        var totalScore = 0; // Le score total de l'utilisateur
+
+        for (let i = 0; i < pages.length; i++) {
+            var pageId = 'page' + pages[i];
+            var userResponses = extractUserResponses(pageId);
+            var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+            var pageScore = 0; // Score de la page actuelle
+
+            for (let j = 0; j < totalQuestions; j++) {
+                var isQuestionCorrect = true;
+
+                // Comparer chaque réponse de l'utilisateur avec la réponse correcte
+                for (let k = 0; k < userResponses[j].length; k++) {
+                    if (userResponses[j][k] !== correctAnswers[j][k]) {
+                        isQuestionCorrect = false;
+                        break;
+                    }
+                }
+
+                if (isQuestionCorrect) {
+                    pageScore++;
+                }
+            }
+
+            totalScore += pageScore;
+            var noteId = 'note_quiz' + (i + 1);
+            document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+        }
+
+        var noteFinale = document.getElementById('note_finale');
+        noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+        return totalScore;
+    }
+
+
+
+
+
+    function extractUserResponses(pageId) {
+        var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+        var userResponses = [];
+
+        for (let i = 0; i < quizQuestions.length; i++) {
+            var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+            var choices = [];
+
+            checkboxes.forEach(function (checkbox) {
+                choices.push(checkbox.checked ? 1 : 0);
+            });
+
+            userResponses.push(choices);
+        }
+
+        return userResponses;
+    }
+
+
+
+    // Appeler showPage avec l'identifiant de la première page lors du chargement initial
+    document.addEventListener("DOMContentLoaded", function () {
+        showPage('page1');
+    });</script>
+
+    <br />
+    <br />
+    <br />

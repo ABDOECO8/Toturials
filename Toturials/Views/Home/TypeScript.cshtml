@@ -1,0 +1,1028 @@
+﻿@{
+Layout = "~/Views/Shared/Header.cshtml";
+ViewData["Title"] = "Header";
+}
+<style>
+h3 {
+color: #2a2e34;
+}
+
+h1 {
+color: #f1faee;
+}
+
+#hood {
+background-color: #0466c8;
+}
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+#note_quiz {
+background-color: #d4a373;
+}
+</style>
+<br />
+<br />
+<br />
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>TypeScript Tutorial</h1></div><div class="pt-5">
+<div class="row ">
+<div class="col-4 d-flex flex-column align-items-center text-left">
+<div class="p-5" style="color:#2a2e34; ">
+<ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+    <li class="text-left mb-3 fs-2 text-lg" style="color: #0466c8;" id="title1">Type Basics</li>
+<li class="text-left fs-2  mb-3" id="title2">Quiz 1</li>
+<li class="text-left fs-2 mb-3" id="title3">Objects & Arrays</li>
+<li class="text-left fs-2 mb-3" id="title4">Quiz 2</li>
+<li class="text-left fs-2 mb-3" id="title5">Explicit Types</li>
+<li class="text-left fs-2 mb-3" id="title6">Quiz 3</li>
+<li class="text-left fs-2 mb-3" id="title7">Dynamic (any) Type</li>
+<li class="text-left fs-2 mb-3" id="title8">Quiz 4</li>
+<li class="text-left fs-2 mb-3" id="title9">Better Workflow & tsconfig</li>
+<li class="text-left fs-2 mb-3" id="title10">Quiz 5</li>
+<li class="text-left fs-2 mb-3" id="title11">Function Basics</li>
+<li class="text-left fs-2 mb-3" id="title12">Quiz 6</li>
+<li class="text-left fs-2 mb-3" id="title13">Certification</li>
+</ol>
+</div>
+
+</div>
+<div class="col ">
+    <div id="content-container d-flex flex-column justify-content-center">
+
+        <div id="page1" class="page">
+            <h2> Type Basics</h2> <br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0DzDqtcxnz0?si=ftT0wtGy_HDKTgvF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div><br />
+            <h3>Résumé</h3>
+
+            <p><strong>1. Déclaration de Variables avec Types :</strong></p>
+            <p>En TypeScript, vous pouvez spécifier le type d'une variable lors de sa déclaration :</p>
+
+<pre><code class="typescript">
+let nombre: number = 42;
+let message: string = "Bonjour";
+let estVrai: boolean = true;
+</code></pre>
+
+            <p><strong>2. Types Primitifs :</strong></p>
+            <p>Les types primitifs incluent <code>number</code>, <code>string</code>, <code>boolean</code>, <code>null</code>, et <code>undefined</code>.</p>
+
+<pre><code class="typescript">
+let age: number = 25;
+let nom: string = "Alice";
+let estMajeur: boolean = true;
+let nulleValeur: null = null;
+let indefiniValeur: undefined = undefined;
+</code></pre>
+
+            <p><strong>3. Tableaux et Types :</strong></p>
+            <p>Vous pouvez déclarer des tableaux avec des types spécifiques :</p>
+
+<pre><code class="typescript">
+let nombres: number[] = [1, 2, 3, 4, 5];
+let mots: string[] = ["un", "deux", "trois"];
+</code></pre>
+
+            <p><strong>4. Tuples :</strong></p>
+            <p>Les tuples permettent de définir un tableau avec un nombre fixe d'éléments de types spécifiques :</p>
+
+<pre><code class="typescript">
+let coordonnees: [number, number] = [10, 20];
+</code></pre>
+
+            <p><strong>5. Enumérations :</strong></p>
+            <p>Les énumérations permettent de définir un ensemble de noms symboliques liés à des valeurs numériques :</p>
+
+<pre><code class="typescript">
+enum Jours {
+Lundi,
+Mardi,
+Mercredi,
+// ...
+}
+let jourActuel: Jours = Jours.Mardi;
+</code></pre>
+
+        </div>
+
+
+        <div id="page2" class="page ">
+            <h3>Quiz</h3>
+
+            <div class="quiz-question">
+                <p><strong>Question 1 :</strong> Comment déclarez-vous une variable avec le type number en TypeScript?</p>
+                <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                <label for="q1_choice1"> let num = 42;</label><br>
+                <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                <label for="q1_choice2"> let num: number = 42;</label><br>
+                <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                <label for="q1_choice3"> let num: string = 42;</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 2 :</strong> Quels sont les types primitifs en TypeScript?</p>
+                <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                <label for="q2_choice1"> string, boolean, array</label><br>
+                <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                <label for="q2_choice2"> number, string, boolean, null, undefined</label><br>
+                <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                <label for="q2_choice3"> int, float, char</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 3 :</strong> Comment déclarez-vous un tableau de nombres en TypeScript?</p>
+                <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                <label for="q3_choice1"> let numbers = [1, 2, 3];</label><br>
+                <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                <label for="q3_choice2"> let numbers: number[] = [1, 2, 3];</label><br>
+                <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                <label for="q3_choice3"> let numbers: array = [1, 2, 3];</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 4 :</strong> Qu'est-ce qu'une énumération en TypeScript?</p>
+                <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                <label for="q4_choice1"> Un type de données associatif.</label><br>
+                <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                <label for="q4_choice2"> Une collection d'objets.</label><br>
+                <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                <label for="q4_choice3"> Un ensemble de noms symboliques liés à des valeurs numériques.</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 5 :</strong> Comment déclarez-vous un tuple en TypeScript?</p>
+                <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                <label for="q5_choice1"> let coordinates = [10, 20];</label><br>
+                <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                <label for="q5_choice2"> let coordinates: tuple = [10, 20];</label><br>
+                <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                <label for="q5_choice3"> let coordinates: [number, number] = [10, 20];</label><br>
+            </div>
+
+
+        </div>
+
+        <div id="page3" class="page">
+            <h2> Objects & Arrays</h2><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/157NopQ-chU?si=atLebGTCdGMGxeL_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br />
+            <h3>Résumé </h3>
+
+            <p><strong>1. Objets :</strong></p>
+            <p>Les objets en TypeScript permettent de regrouper des propriétés et des méthodes associées. La déclaration d'un objet se fait avec des accolades :</p>
+
+<pre><code class="typescript">
+let utilisateur: { nom: string, age: number, estActif: boolean } = {
+nom: "Alice",
+age: 30,
+estActif: true
+};
+</code></pre>
+
+            <p><strong>2. Accéder aux Propriétés d'un Objet :</strong></p>
+            <p>On peut accéder aux propriétés d'un objet à l'aide de la notation pointée :</p>
+
+<pre><code class="typescript">
+console.log(utilisateur.nom); // Affiche "Alice"
+</code></pre>
+
+            <p><strong>3. Tableaux d'Objets :</strong></p>
+            <p>Les tableaux en TypeScript peuvent contenir des objets. Chaque objet peut avoir une structure similaire ou différente :</p>
+
+<pre><code class="typescript">
+let utilisateurs: { nom: string, age: number }[] = [
+{ nom: "Alice", age: 30 },
+{ nom: "Bob", age: 25 },
+{ nom: "Charlie", age: 35 }
+];
+</code></pre>
+
+            <p><strong>4. Boucle for-of :</strong></p>
+            <p>La boucle <code>for-of</code> permet de parcourir les éléments d'un tableau de manière simple :</p>
+
+<pre><code class="typescript">
+for (let utilisateur of utilisateurs) {
+console.log(utilisateur.nom);
+}
+</code></pre>
+
+            <p><strong>5. Propriétés Dynamiques :</strong></p>
+            <p>Les objets en TypeScript peuvent avoir des propriétés dynamiques. On peut ajouter de nouvelles propriétés après la déclaration :</p>
+
+<pre><code class="typescript">
+utilisateur.adresse = "123 Rue Principale";
+</code></pre>
+
+
+        </div>
+
+
+        <div id="page4" class="page">
+            <h3>Quiz</h3>
+            <div class="quiz-question">
+                <p><strong>Question 1 :</strong> Comment déclarez-vous un objet en TypeScript?</p>
+                <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                <label for="q1_choice1"> let obj = { key: value };</label><br>
+                <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                <label for="q1_choice2"> let obj: { key: string, value: number };</label><br>
+                <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                <label for="q1_choice3"> let obj = new Object();</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 2 :</strong> Comment accédez-vous à la propriété "nom" d'un objet <code>utilisateur</code>?</p>
+                <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                <label for="q2_choice1"> utilisateur.nom;</label><br>
+                <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                <label for="q2_choice2"> utilisateur["nom"];</label><br>
+                <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                <label for="q2_choice3"> Both A and B</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 3 :</strong> Comment déclarez-vous un tableau d'objets en TypeScript?</p>
+                <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                <label for="q3_choice1"> let array = [ { key: value } ];</label><br>
+                <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                <label for="q3_choice2"> let array: { key: string, value: number }[];</label><br>
+                <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                <label for="q3_choice3"> let array: Array&lt;{ key: string, value: number }&gt;;</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 4 :</strong> Quelle boucle est utilisée pour parcourir les éléments d'un tableau en TypeScript?</p>
+                <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                <label for="q4_choice1"> for-in</label><br>
+                <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                <label for="q4_choice2"> for-of</label><br>
+                <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                <label for="q4_choice3"> forEach</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 5 :</strong> Comment ajoutez-vous une nouvelle propriété dynamique à un objet en TypeScript?</p>
+                <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                <label for="q5_choice1"> obj.newProperty = "valeur";</label><br>
+                <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                <label for="q5_choice2"> obj["newProperty"] = "valeur";</label><br>
+                <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                <label for="q5_choice3"> Both A and B</label><br>
+            </div>
+        </div>
+
+
+        <div id="page5" class="page">
+            <h2>  Explicit Types </h2><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/__92ek8Xh4o?si=XBaQz5PzaX1iMG7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br />
+
+            <h3>Résumé</h3>
+
+            <p><strong>1. Déclaration de Types pour les Variables :</strong></p>
+            <p>En TypeScript, vous pouvez spécifier explicitement le type d'une variable lors de sa déclaration :</p>
+
+<pre><code class="typescript">
+let age: number;
+age = 25;
+</code></pre>
+
+            <p><strong>2. Types pour les Fonctions :</strong></p>
+            <p>Vous pouvez déclarer les types des paramètres et du résultat d'une fonction :</p>
+
+<pre><code class="typescript">
+function multiplier(x: number, y: number): number {
+return x * y;
+}
+</code></pre>
+
+            <p><strong>3. Types pour les Objets :</strong></p>
+            <p>Spécifiez les types des propriétés d'un objet pour une déclaration plus précise :</p>
+
+<pre><code class="typescript">
+let utilisateur: { nom: string, age: number };
+utilisateur = { nom: "Alice", age: 30 };
+</code></pre>
+
+            <p><strong>4. Types pour les Tableaux :</strong></p>
+            <p>Déclarez le type des éléments d'un tableau pour une manipulation plus sûre :</p>
+
+<pre><code class="typescript">
+let nombres: number[];
+nombres = [1, 2, 3, 4, 5];
+</code></pre>
+
+            <p><strong>5. Type Any :</strong></p>
+            <p>Utilisez le type <code>any</code> pour représenter une variable dont le type n'est pas connu à la compilation :</p>
+
+<pre><code class="typescript">
+let variableInconnue: any = "Je peux être de n'importe quel type.";
+</code></pre>
+
+
+        </div>
+
+
+        <div id="page6" class="page">
+
+            <h3>Quiz</h3>
+
+
+            <div class="quiz-question">
+                <p><strong>Question 1 :</strong> Comment déclarez-vous explicitement le type d'une variable en TypeScript?</p>
+                <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                <label for="q1_choice1"> let x = 10;</label><br>
+                <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                <label for="q1_choice2"> let x: number = 10;</label><br>
+                <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                <label for="q1_choice3"> let x: string = 10;</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 2 :</strong> Comment spécifiez-vous les types des paramètres et du résultat d'une fonction en TypeScript?</p>
+                <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                <label for="q2_choice1"> function add(x, y) { return x + y; }</label><br>
+                <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                <label for="q2_choice2"> function add(x: number, y: number): number { return x + y; }</label><br>
+                <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                <label for="q2_choice3"> function add(x: string, y: string): string { return x + y; }</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 3 :</strong> Comment déclarez-vous le type des propriétés d'un objet en TypeScript?</p>
+                <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                <label for="q3_choice1"> let obj = { key: "value" };</label><br>
+                <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                <label for="q3_choice2"> let obj: { key: string, value: number };</label><br>
+                <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                <label for="q3_choice3"> let obj: any;</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 4 :</strong> Comment déclarez-vous le type des éléments d'un tableau en TypeScript?</p>
+                <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                <label for="q4_choice1"> let arr = [1, 2, 3];</label><br>
+                <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                <label for="q4_choice2"> let arr: array;</label><br>
+                <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                <label for="q4_choice3"> let arr: number[];</label><br>
+            </div>
+
+            <div class="quiz-question">
+                <p><strong>Question 5 :</strong> Quel type est utilisé pour représenter une variable dont le type n'est pas connu à la compilation en TypeScript?</p>
+                <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                <label for="q5_choice1"> type: unknown;</label><br>
+                <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                <label for="q5_choice2"> type: any;</label><br>
+                <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                <label for="q5_choice3"> type: undefined;</label><br>
+            </div>
+
+        </div>
+
+
+        <div id="page7" class="page">
+            <h2> Dynamic (any) Types</h2><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nm9P2vnS9_I?si=fpqSVT4hpNfFkg1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    <br />
+            </div>
+            <h3>Résumé</h3>
+
+            <p><strong>1. Type Any :</strong></p>
+            <p>En TypeScript, le type <code>any</code> est utilisé pour représenter une variable dont le type n'est pas connu à la compilation. <br />Cela donne une flexibilité accrue, mais peut entraîner des problèmes de sécurité et de maintenance :</p>
+
+<pre><code class="typescript">
+let variableDynamique: any = "Je peux être de n'importe quel type.";
+variableDynamique = 42; // Valide
+variableDynamique = true; // Valide
+</code></pre>
+
+            <p><strong>2. Éviter le Type Any :</strong></p>
+            <p>Il est recommandé d'éviter autant que possible l'utilisation du type <code>any</code> pour bénéficier des avantages de la vérification de type statique :</p>
+
+<pre><code class="typescript">
+let age: number = 25; // Type spécifique
+let nom: string = "Alice"; // Type spécifique
+</code></pre>
+
+            <p><strong>3. Perte de la Vérification de Type :</strong></p>
+            <p>L'utilisation excessive du type <code>any</code> peut entraîner une perte de la vérification de type, ce qui peut conduire à des erreurs difficiles à repérer :</p>
+
+<pre><code class="typescript">
+let valeurDouteuse: any = "123";
+let longueur: number = valeurDouteuse.length; // Aucune erreur à la compilation, mais peut causer une erreur à l'exécution
+</code></pre>
+
+            <p><strong>4. Utilisation Prudente :</strong></p>
+            <p>Si nécessaire, utilisez le type <code>any</code> de manière prudente et documentez clairement les raisons pour lesquelles il est utilisé :</p>
+
+<pre><code class="typescript">
+let resultat: any = appelFonctionDynamique();
+// Documentez la raison de l'utilisation du type any ici
+</code></pre>
+
+        </div>
+    </div>
+
+    <div id="page8" class="page">
+        <h3>Quiz</h3>
+
+        <div class="quiz-question">
+            <p><strong>Question 1 :</strong> Qu'est-ce que le type <code>any</code> représente en TypeScript?</p>
+            <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+            <label for="q1_choice1"> Un type numérique</label><br>
+            <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+            <label for="q1_choice2"> Un type de chaîne de caractères</label><br>
+            <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+            <label for="q1_choice3"> Un type dynamique pouvant être de n'importe quel type</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 2 :</strong> Pourquoi devriez-vous éviter l'utilisation excessive du type <code>any</code>?</p>
+            <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+            <label for="q2_choice1"> Pour des raisons de performance</label><br>
+            <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+            <label for="q2_choice2"> Pour éviter des erreurs difficiles à repérer à l'exécution</label><br>
+            <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+            <label for="q2_choice3"> Parce que le type <code>any</code> est obsolète</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 3 :</strong> Quelle déclaration est correcte pour une variable de type <code>any</code>?</p>
+            <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+            <label for="q3_choice1"> let x: number = any;</label><br>
+            <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+            <label for="q3_choice2"> let x: any = 10;</label><br>
+            <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+            <label for="q3_choice3"> let x = "any";</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 4 :</strong> Que peut causer l'utilisation excessive du type <code>any</code>?</p>
+            <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+            <label for="q4_choice1"> Une amélioration de la vérification de type</label><br>
+            <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+            <label for="q4_choice2"> Des erreurs difficiles à repérer à l'exécution</label><br>
+            <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+            <label for="q4_choice3"> Une meilleure performance</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 5 :</strong> Comment documentez-vous de manière prudente l'utilisation du type <code>any</code>?</p>
+            <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+            <label for="q5_choice1"> En ne fournissant aucune documentation</label><br>
+            <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+            <label for="q5_choice2"> En laissant des commentaires clairs expliquant la raison de l'utilisation</label><br>
+            <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+            <label for="q5_choice3"> En créant un document séparé pour l'utilisation de <code>any</code></label><br>
+        </div>
+    </div>
+
+
+    <div id="page9" class="page">
+        <h2>Better Workflow & tsconfig</h2><br />
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4IiQY9dNRA?si=MVAkVvgUuBEgdsQi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <br />
+        <h3>Résumé</h3>
+
+        <p><strong>1. tsconfig.json :</strong></p>
+        <p>Le fichier <code>tsconfig.json</code> est utilisé pour configurer le compilateur TypeScript et définir les options du projet. Il permet de spécifier les fichiers sources, le répertoire de sortie, les options de compilation, etc. Exemple :</p>
+
+        <pre><code class="typescript">
+{
+"compilerOptions": {
+"target": "es6",
+"module": "commonjs",
+"outDir": "./dist",
+"strict": true
+},
+"include": ["src/**/*.ts"],
+"exclude": ["node_modules"]
+}
+</code></pre>
+
+        <p><strong>2. Options de Compilation :</strong></p>
+        <p>Le fichier de configuration permet de définir des options telles que la version ECMAScript cible, le module de code généré, le répertoire de sortie, et d'autres options de strict typing pour améliorer la qualité du code.</p>
+
+        <p><strong>3. Amélioration du Flux de Travail :</strong></p>
+        <p>La configuration du <code>tsconfig.json</code> offre un meilleur flux de travail en permettant une compilation TypeScript simplifiée. Il suffit d'exécuter <code>tsc</code> pour compiler le projet en utilisant la configuration définie.</p>
+
+        <p><strong>4. Gestion des Types :</strong></p>
+        <p>Le fichier <code>tsconfig.json</code> permet de spécifier comment gérer les fichiers de définition de types (<code>.d.ts</code>) et d'inclure ou exclure des fichiers lors de la compilation.</p>
+
+        <p><strong>5. Fichiers d'Entrée :</strong></p>
+        <p>Les options <code>include</code> et <code>exclude</code> permettent de définir les fichiers TypeScript inclus dans la compilation, et ceux à exclure. Cela offre une granularité fine sur les fichiers à traiter.</p>
+
+    </div>
+
+
+    <div id="page10" class="page">
+        <h3>Quiz</h3>
+
+        <div class="quiz-question">
+            <p><strong>Question 1 :</strong> Quel est le rôle principal du fichier <code>tsconfig.json</code> en TypeScript?</p>
+            <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+            <label for="q1_choice1"> Définir les variables d'environnement</label><br>
+            <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+            <label for="q1_choice2"> Configurer le compilateur TypeScript et définir les options du projet</label><br>
+            <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+            <label for="q1_choice3"> Spécifier les styles de codage</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 2 :</strong> Quelle est la commande utilisée pour compiler un projet TypeScript en utilisant la configuration <code>tsconfig.json</code>?</p>
+            <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+            <label for="q2_choice1"> tsc --compile</label><br>
+            <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+            <label for="q2_choice2"> compile-ts</label><br>
+            <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+            <label for="q2_choice3"> tsc</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 3 :</strong> Que spécifie l'option <code>"outDir"</code> dans le fichier <code>tsconfig.json</code>?</p>
+            <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+            <label for="q3_choice1"> Le répertoire des fichiers source</label><br>
+            <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+            <label for="q3_choice2"> Le répertoire de sortie pour les fichiers compilés</label><br>
+            <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+            <label for="q3_choice3"> Le répertoire des fichiers de définition de types</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 4 :</strong> Quelle option de <code>tsconfig.json</code> permet de spécifier la version ECMAScript cible?</p>
+            <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+            <label for="q4_choice1"> "strict"</label><br>
+            <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+            <label for="q4_choice2"> "module"</label><br>
+            <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+            <label for="q4_choice3"> "target"</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 5 :</strong> Quelle section de <code>tsconfig.json</code> est utilisée pour spécifier les fichiers TypeScript à inclure dans la compilation?</p>
+            <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+            <label for="q5_choice1"> "files"</label><br>
+            <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+            <label for="q5_choice2"> "sources"</label><br>
+            <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+            <label for="q5_choice3"> "include"</label><br>
+        </div>
+
+    </div>
+
+
+    <div id="page11" class="page">
+        <h2>Function Basics</h2><br />
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jXoSaX_yFh4?si=8mH0F0mYlYsNuc1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <br />
+
+        <h3>Résumé</h3>
+
+        <p><strong>1. Déclaration de Fonction :</strong></p>
+        <p>En TypeScript, les fonctions peuvent être déclarées avec le mot-clé <code>function</code>. Exemple :</p>
+
+        <pre><code class="typescript">
+function additionner(a: number, b: number): number {
+return a + b;
+}
+</code></pre>
+
+        <p><strong>2. Paramètres et Types :</strong></p>
+        <p>Les paramètres d'une fonction peuvent avoir des types spécifiés pour garantir la bonne entrée. De plus, le type du résultat peut également être spécifié.</p>
+
+        <p><strong>3. Fonctions avec Valeurs Par Défaut :</strong></p>
+        <p>On peut définir des valeurs par défaut pour les paramètres de fonction en TypeScript. Cela permet d'appeler la fonction même si certains paramètres ne sont pas fournis.</p>
+
+        <pre><code class="typescript">
+function saluer(nom: string = "Anonyme"): string {
+return "Bonjour, " + nom + "!";
+}
+</code></pre>
+
+        <p><strong>4. Fonctions Fléchées :</strong></p>
+        <p>Les fonctions fléchées sont une syntaxe concise pour définir des fonctions. Elles préservent la valeur de <code>this</code> du contexte d'exécution.</p>
+
+        <pre><code class="typescript">
+const multiplier = (x: number, y: number): number => x * y;
+</code></pre>
+
+        <p><strong>5. Fonctions en tant que Types :</strong></p>
+        <p>En TypeScript, les fonctions peuvent être traitées comme des types, permettant de définir des signatures de fonction et de les utiliser dans d'autres parties du code.</p>
+
+        <pre><code class="typescript">
+type Operation = (a: number, b: number) => number;
+const addition: Operation = (x, y) => x + y;
+</code></pre>
+
+
+    </div>
+
+
+    <div id="page12" class="page">
+        <h3>Quiz</h3>
+        <div class="quiz-question">
+            <p><strong>Question 1 :</strong> Comment déclare-t-on une fonction en TypeScript?</p>
+            <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+            <label for="q1_choice1"> function maFonction() {}</label><br>
+            <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+            <label for="q1_choice2"> func maFonction() {}</label><br>
+            <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+            <label for="q1_choice3"> fn maFonction() {}</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 2 :</strong> Comment spécifie-t-on le type du paramètre et le type de retour d'une fonction?</p>
+            <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+            <label for="q2_choice1"> Utiliser <code>type</code></label><br>
+            <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+            <label for="q2_choice2"> Utiliser <code>param</code> et <code>return</code></label><br>
+            <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+            <label for="q2_choice3"> Spécifier directement dans la signature de fonction</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 3 :</strong> Comment définir une valeur par défaut pour un paramètre de fonction?</p>
+            <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+            <label for="q3_choice1"> Utiliser <code>default</code></label><br>
+            <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+            <label for="q3_choice2"> Utiliser <code>init</code></label><br>
+            <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+            <label for="q3_choice3"> Spécifier directement dans la signature de fonction</label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 4 :</strong> Quelle est la principale différence entre une fonction normale et une fonction fléchée en TypeScript?</p>
+            <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+            <label for="q4_choice1"> Syntaxe différente</label><br>
+            <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+            <label for="q4_choice2"> Les fonctions fléchées ne peuvent pas avoir de paramètres</label><br>
+            <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+            <label for="q4_choice3"> Les fonctions fléchées préservent la valeur de <code>this</code></label><br>
+        </div>
+
+        <div class="quiz-question">
+            <p><strong>Question 5 :</strong> Comment utilise-t-on une fonction en tant que type en TypeScript?</p>
+            <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+            <label for="q5_choice1"> En spécifiant le type avec <code>funcType</code></label><br>
+            <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+            <label for="q5_choice2"> En utilisant <code>function as type</code></label><br>
+            <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+            <label for="q5_choice3"> En définissant un type avec la signature de la fonction</label><br>
+        </div>
+
+    </div>
+
+
+    <div id="page13" class="page">
+        <div id="finalResult d-flex flex-column justify-content-center pr-3">
+            <div class="row">
+                <div class="col">
+                    <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                        <h1>Quiz 1</h1>
+                        <h2 id="note_quiz1"></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                        <h1>Quiz 2</h1>
+                        <h2 id="note_quiz2"></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                        <h1>Quiz 3</h1>
+                        <h2 id="note_quiz3"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                        <h1>Quiz 4</h1>
+                        <h2 id="note_quiz4"></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                        <h1>Quiz 5</h1>
+                        <h2 id="note_quiz5"></h2>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                        <h1>Quiz 6</h1>
+                        <h2 id="note_quiz6"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+                    <h1>Note</h1>
+                    <h2 id="note_finale"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+    <nav id="SP" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+            <li class="page-item"><a style="background-color: #0466c8" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+            
+<div>
+<div id="certificatButton" style="display: none;">
+<button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+</div>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+function generateCertificate() {
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+const fullName = "@Model.FirstName " + "@Model.LastName";
+const note = showResultsPage();
+
+// Définir la mise en page verticale
+
+doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+// Dessiner un rectangle coloré (1 cm de largeur)
+doc.rect(10, 10, 189, 277, 'FD');
+
+// Ajouter des informations utilisateur
+doc.setFontSize(20);
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+doc.setFontSize(16);
+doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+doc.setFontSize(18);
+doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+doc.text(fullName, 105, 70, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.setFontSize(14);
+doc.text('Has successfully completed TypeScript Tutorial', 105, 100, { align: 'center' });
+
+doc.setFontSize(16);
+doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+// Ajouter d'autres  informations selon vos besoins
+doc.setFontSize(14);
+doc.text('With a degree of ', 105, 135, { align: 'center' });
+doc.setFontSize(14);
+doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.setFontSize(16);
+doc.text('Director', 105, 180, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+doc.text('Associate Professor', 105, 210, { align: 'center' });
+doc.setTextColor(0); // Couleur du texte (blanc)
+
+doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+doc.setFontSize(12);
+doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+// Télécharger le PDF
+doc.save("Certificate.pdf");
+}
+
+
+
+var currentPage = 1;
+var totalPages = 13;
+
+function showPage(pageId) {
+// Masquer toutes les pages
+var pages = document.getElementsByClassName('page');
+for (var i = 0; i < pages.length; i++) {
+pages[i].style.display = 'none';
+}
+
+// Afficher la page spécifique
+var pageToShow = document.getElementById(pageId);
+if (pageToShow) {
+pageToShow.style.display = 'block';
+}
+}
+
+function showPreviousPage() {
+if (currentPage > 1) {
+currentPage--;
+showPage('page' + currentPage);
+}
+var title0 = document.getElementById('title' + (currentPage + 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#0466c8';
+
+}
+
+function showNextPage() {
+if (currentPage < 12) {
+currentPage++;
+showPage('page' + currentPage);
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+
+title0.style.color = '#2a2e34';
+title.style.color = '#0466c8';
+
+} else {
+currentPage++;
+var title0 = document.getElementById('title' + (currentPage - 1));
+var title = document.getElementById('title' + currentPage);
+title0.style.color = '#2a2e34';
+    title.style.color = '#ef233c';
+showResultsPage();
+showCertificatButton()
+}
+
+}
+
+function showCertificatButton() {
+// Masquer la pagination
+var pagination = document.getElementById('SP');
+if (pagination) {
+pagination.style.display = 'none';
+}
+
+// Afficher le bouton "Résultat"
+var resultsButton = document.getElementById('certificatButton');
+if (resultsButton) {
+resultsButton.style.display = 'block';
+}
+}
+
+
+
+function showResultsPage() {
+// Masquer toutes les pages
+showPage('page13');
+var correctAnswersPages = [
+// quiz1
+[
+[0, 0, 1],
+[0, 1, 0],
+[1, 0, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+// quiz2
+[
+[0, 0, 1],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0]
+],
+//quiz3
+[
+[0, 1, 0],
+[1, 0],
+[1, 0],
+[0, 1],
+[1, 0]
+],
+//quiz4
+[
+[1, 0, 0],
+[0, 1, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 0, 3]
+],
+//quiz5
+[
+[0, 1, 0],
+[0, 0, 1],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0]
+],
+//quiz6
+[
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[1, 0, 0],
+[0, 1, 0]
+]
+
+]
+
+var pages = [2, 4, 6, 8, 10, 12];
+// pour comparer les resultat
+var totalQuestions = 5; // Le nombre total de questions par page
+var totalScore = 0; // Le score total de l'utilisateur
+
+for (let i = 0; i < pages.length; i++) {
+var pageId = 'page' + pages[i];
+var userResponses = extractUserResponses(pageId);
+var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+var pageScore = 0; // Score de la page actuelle
+
+for (let j = 0; j < totalQuestions; j++) {
+var isQuestionCorrect = true;
+
+// Comparer chaque réponse de l'utilisateur avec la réponse correcte
+for (let k = 0; k < userResponses[j].length; k++) {
+if (userResponses[j][k] !== correctAnswers[j][k]) {
+isQuestionCorrect = false;
+break;
+}
+}
+
+if (isQuestionCorrect) {
+pageScore++;
+}
+}
+
+totalScore += pageScore;
+var noteId = 'note_quiz' + (i + 1);
+document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+}
+
+var noteFinale = document.getElementById('note_finale');
+noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+return totalScore;
+}
+
+
+
+
+
+function extractUserResponses(pageId) {
+var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+var userResponses = [];
+
+for (let i = 0; i < quizQuestions.length; i++) {
+var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+var choices = [];
+
+checkboxes.forEach(function (checkbox) {
+choices.push(checkbox.checked ? 1 : 0);
+});
+
+userResponses.push(choices);
+}
+
+return userResponses;
+}
+
+
+
+// Appeler showPage avec l'identifiant de la première page lors du chargement initial
+document.addEventListener("DOMContentLoaded", function () {
+showPage('page1');
+});</script>
+
+<br />
+<br />
+<br />

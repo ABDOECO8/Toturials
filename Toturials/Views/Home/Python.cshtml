@@ -1,0 +1,968 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Header.cshtml";
+    ViewData["Title"] = "Header";
+    //var firstName = HttpContext.Session.GetString("FirstName");
+    //var lastName = HttpContext.Session.GetString("LastName");
+}
+
+
+<style>
+    h2 {
+        color: #001d3d;
+    }
+
+    h3 {
+        color: #4f5d75;
+    }
+
+    h1 {
+        color: #f1faee;
+    }
+
+    #hood {
+        background-color: #ffc300;
+    }
+
+    .quiz-question {
+        margin-bottom: 15px;
+    }
+
+    #quiz1, #quiz2, #quiz3, #quiz4, #quiz5, #quiz6 {
+        background-color: #6d6875;
+    }
+
+    #note_quiz {
+        background-color: #d4a373;
+    }
+</style>
+<br />
+<br />
+<br />
+<br />
+
+<div class="text-center rounded-full shadow fs-4 w-25" id="hood"> <h1>Python Tutorial</h1></div>
+<div class="pt-5">
+    <div class="row ">
+        <div class="col-4 d-flex flex-column align-items-center text-left">
+            <div class="p-5" style="color:#2a2e34; ">
+                <ol style="list-style-type: disc; padding: 0; color: #2a2e34; ">
+                    <li class="text-left mb-3 fs-3 text-lg" style="color: #ffc300; " id="title1">Les variables</li>
+                    <li class="text-left fs-3  mb-3" id="title2">Quiz 1</li>
+                    <li class="text-left fs-3 mb-3" id="title3">print( ) et input( )</li>
+                    <li class="text-left fs-3 mb-3" id="title4">Quiz 2</li>
+                    <li class="text-left fs-3 mb-3" id="title5">Expressions</li>
+                    <li class="text-left fs-3 mb-3" id="title6">Quiz 3</li>
+                    <li class="text-left fs-3 mb-3" id="title7">Structures conditionnelles</li>
+                    <li class="text-left fs-3 mb-3" id="title8">Quiz 4</li>
+                    <li class="text-left fs-3 mb-3" id="title9">Structures répétitives : for</li>
+                    <li class="text-left fs-3 mb-3" id="title10">Quiz 5</li>
+                    <li class="text-left fs-3 mb-3" id="title11">Structures répétitives : while</li>
+                    <li class="text-left fs-3 mb-3" id="title12">Quiz 6</li>
+                    <li class="text-left fs-3 mb-3" id="title13">Certification</li>
+                </ol>
+            </div>
+
+        </div>
+        <div class="col ">
+            <div id="content-container d-flex flex-column justify-content-center">
+                <div id="page1" class="page">
+                    <h2> Les variables : déclaration, affectation et utilisation </h2> <br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rxoZW9uwP4E?si=KSN_ymNPfo0FpXsX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div><br />
+                    <h3>Résumé</h3>
+
+                    <p><strong>Déclaration :</strong></p>
+                    <p>En Python, la déclaration d'une variable se fait simplement en utilisant le nom de la variable suivi d'un signe égal (<code>=</code>) pour affecter une valeur.</p>
+
+                    <pre><code class="python">
+                        nom_variable = "Valeur de la variable"
+                        </code></pre>
+
+                    <p><strong>Affectation :</strong></p>
+                    <p>Les variables peuvent être réaffectées avec de nouvelles valeurs.</p>
+
+                    <pre><code class="python">
+                        nom_variable = 42
+                        </code></pre>
+
+                    <p><strong>Utilisation :</strong></p>
+                    <p>Les variables sont utilisées pour stocker des données et peuvent être utilisées dans des opérations ou dans des affichages.</p>
+
+                    <pre><code class="python">
+                        resultat = nom_variable * 2
+                        print(resultat)
+                        </code></pre>
+
+                </div>
+
+
+                <div id="page2" class="page ">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quelle est la syntaxe pour déclarer une variable en Python?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> var x = 10;</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> let x = 10;</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> x = 10;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Comment réaffectez-vous une variable en Python?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1">x := 20;</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2">x = 20;</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> x <= 20;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est l'utilité d'une variable en programmation?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Stocker des données</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Cuire un gâteau</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Piloter un avion</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment affichez-vous le contenu d'une variable en Python?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> console.log(x);</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> print(x)</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> echo x;</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est la différence entre déclaration et affectation de variable?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Aucune différence</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> La déclaration crée une variable, l'affectation lui donne une valeur</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> La déclaration initialise une variable, l'affectation la modifie</label><br>
+                    </div>
+                </div>
+
+                <div id="page3" class="page">
+                    <h2>print( ) et input( )</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/r6E6QJ4bbs4?si=TVqf-XRet6QCP0ic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé </h3>
+
+                    <p><strong>print() :</strong></p>
+                    <p>La fonction <code>print()</code> est utilisée pour afficher du texte ou d'autres informations dans la console en Python.</p>
+
+                    <pre><code class="python">
+                        print("Hello, World!")
+                        </code></pre>
+
+                    <p><strong>input() :</strong></p>
+                    <p>La fonction <code>input()</code> est utilisée pour obtenir une entrée de l'utilisateur. Elle affiche un message optionnel, puis attend que l'utilisateur saisisse quelque chose et appuie sur Enter.</p>
+
+                    <pre><code class="python">
+                        nom_utilisateur = input("Entrez votre nom : ")
+                        print("Bonjour, " + nom_utilisateur + "!")
+                        </code></pre>
+                </div>
+
+
+                <div id="page4" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment affichez-vous du texte à l'écran en utilisant print( ) en Python?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> echo "Hello, World!";</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> console.log("Hello, World!");</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> print("Hello, World!")</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle fonction permet de recevoir des entrées de l'utilisateur en Python?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> get()</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> input()</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> user_input()</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment affichez-vous une variable avec du texte en Python?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> print("La variable est : " + x)</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> print("La variable est :", x)</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> print("La variable est " + x)</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment demandez-vous à l'utilisateur d'entrer un nombre en Python?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> user_input("Entrez un nombre :")</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> input("Entrez un nombre :")</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> get("Entrez un nombre :")</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quel type de données retourne la fonction input() en Python?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> int</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> str</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> float</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page5" class="page">
+                    <h2>  Expressions arithmétiques, expressions de comparaisons et expressions logiques </h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rxoZW9uwP4E?si=KSN_ymNPfo0FpXsX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+                    <section>
+                        <h4>Expressions Arithmétiques</h4>
+                        <p>Les expressions arithmétiques sont utilisées pour effectuer des opérations mathématiques.</p>
+                        <ul>
+                            <li>Addition: <code>a + b</code></li>
+                            <li>Soustraction: <code>a - b</code></li>
+                            <li>Multiplication: <code>a * b</code></li>
+                            <li>Division: <code>a / b</code></li>
+                            <!-- Ajoutez d'autres opérations au besoin -->
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Expressions de Comparaisons</h4>
+                        <p>Les expressions de comparaisons sont utilisées pour comparer des valeurs.</p>
+                        <ul>
+                            <li>Égalité: <code>a == b</code></li>
+                            <li>Inégalité: <code>a != b</code></li>
+                            <li>Supérieur à: <code>a > b</code></li>
+                            <li>Inférieur à: <code>a < b</code></li>
+                            <!-- Ajoutez d'autres comparaisons au besoin -->
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Expressions Logiques</h4>
+                        <p>Les expressions logiques sont utilisées pour évaluer des conditions logiques.</p>
+                        <ul>
+                            <li>ET Logique: <code>condition1 && condition2</code></li>
+                            <li>OU Logique: <code>condition1 || condition2</code></li>
+                            <li>NON Logique: <code>!condition</code></li>
+                            <!-- Ajoutez d'autres opérations logiques au besoin -->
+                        </ul>
+                    </section>
+
+                </div>
+
+
+                <div id="page6" class="page">
+
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Quelle est la valeur de l'expression arithmétique <code>3 * (5 + 2)</code> ?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> 15</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> 21</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3">27</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la valeur de l'expression de comparaison <code>8 > 5</code> ?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> Vrai</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> Faux</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la valeur de l'expression logique <code>(True and False) or True</code> ?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Vrai</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Faux</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Quelle est la valeur de l'expression de comparaison <code>10 == "10"</code> ?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> Vrai</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> Faux</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est la valeur de l'expression logique <code>not (True and False)</code> ?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Vrai</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Faux</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page7" class="page">
+                    <h2>Structures Conditionnelles if...else</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/_2mUZ1df8Bk?si=ko-XCu7nY5L6HXiD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+
+                    <section>
+                        <h4>Structure if...else</h4>
+                        <p>La structure conditionnelle <code>if...else</code> permet de prendre des décisions en fonction de la véracité d'une condition.</p>
+                        <pre>
+                        <code>
+                            age = 18
+
+                            if age >= 18:
+                                print("Vous êtes majeur.")
+                            else:
+                                print("Vous êtes mineur.")
+                                    </code>
+                                </pre>
+                    </section>
+
+                    <section>
+                        <h4>Structure if...elif...else</h4>
+                        <p>La structure <code>if...elif...else</code> permet de gérer plusieurs conditions.</p>
+                        <pre>
+                        <code>
+                            score = 85
+
+                            if score >= 90:
+                                print("Excellent!")
+                            elif 80 <= score < 90:
+                                print("Bien joué!")
+                            else:
+                                print("À améliorer.")
+                                    </code>
+                                </pre>
+                    </section>
+
+
+                </div>
+
+
+                <div id="page8" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment s'écrit une structure conditionnelle if simple en Python?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> if condition :</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> if (condition)</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> if {condition}</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la syntaxe pour une structure if...else en Python?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> if (condition) { } else { }</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2">if condition : else :</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> if condition: else</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Que fait la structure if...else en Python?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> Exécute le code indiqué si la condition est vraie, sinon exécute le code dans else</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> Affiche un message d'erreur</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> Ignore la condition et exécute le code dans else</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Comment s'écrit une structure if...elif...else en Python?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> if condition : elif condition : else :</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> if condition : else if condition : else :</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> if condition : elif condition : else</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Que se passe-t-il si aucune des conditions dans une structure if...elif...else n'est vraie?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1">Une exception est levée</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Le programme continue sans exécuter aucun code</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Le code dans else est exécuté</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page9" class="page">
+                    <h2>Structures répétitives : la boucle for, la fonction range(), et les boucles imbriquées</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mLWhYXPBWz4?si=ORcq2fIvGI4VluOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+                    <h3>Résumé</h3>
+
+                    <section>
+                        <h4>Boucle for</h4>
+                        <p>La boucle <code>for</code> permet d'itérer sur une séquence (liste, tuple, chaîne de caractères, etc.).</p>
+                        <pre>
+                        <code>
+                        for i in range(5):
+                            print(i)
+                                </code>
+                            </pre>
+                    </section>
+
+                    <section>
+                        <h4>Fonction range()</h4>
+                        <p>La fonction <code>range()</code> génère une séquence de nombres.</p>
+                        <pre>
+                        <code>
+                            for i in range(2, 10, 2):
+                                print(i)
+                                    </code>
+                                </pre>
+                    </section>
+
+                    <section>
+                        <h4>Boucles imbriquées</h4>
+                        <p>Les boucles peuvent être imbriquées pour effectuer des opérations plus complexes.</p>
+                        <pre>
+                        <code>
+                            for i in range(3):
+                                for j in range(2):
+                                    print(f"i = {i}, j = {j}")
+                                    </code>
+                                </pre>
+                    </section>
+
+                </div>
+
+
+                <div id="page10" class="page">
+                    <h3>Quiz</h3>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment s'écrit une boucle for en Python?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1">for (i = 0; i < 5; i++)</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> for i in range(5):</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> loop (i = 0; i < 5; i++)</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la fonction utilisée pour générer une séquence de nombres dans une boucle for en Python?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> generate()</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> sequence()</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> range()</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Quelle est la syntaxe correcte pour une boucle for utilisant la fonction range()?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> for i in range(5):</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> for i = 0; i < 5; i++</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> loop i in range(5)</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Que fait la fonction range(3, 10, 2) en Python?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1">Génère une séquence de nombres de 3 à 10 avec un pas de 2</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> Génère une séquence de nombres de 3 à 10 avec un pas de 1</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> Génère une séquence de nombres de 10 à 3 avec un pas de -2</label><br>
+                    </div>
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est la sortie de la boucle for suivante en Python?</p>
+                        <pre><code class="python">
+                            for i in range(3):
+                                for j in range(2):
+                                    print(f"({i}, {j})", end=' ')
+                        </code></pre>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1">(0, 0) (0, 1) (1, 0) (1, 1) (2, 0) (2, 1)</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2">(0, 0) (1, 0) (2, 0) (0, 1) (1, 1) (2, 1)</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> (0, 0) (0, 1) (1, 0) (1, 1) (2, 0) (2, 1) (3, 0) (3, 1)</label><br>
+                    </div>
+
+
+                </div>
+
+
+                <div id="page11" class="page">
+                    <h2>Structures répétitives : la boucle while</h2><br />
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/V40UPbhlG_E?si=KZtM_kt1XfFtXF9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <br />
+
+                    <h3>Résumé</h3>
+
+                    <section>
+                        <h4>Boucle While</h4>
+                        <p>La boucle <code>while</code> permet d'exécuter un bloc de code tant qu'une condition est vraie.</p>
+                        <pre>
+                        <code>
+                            i = 0
+                            while i < 5:
+                                print(i)
+                                i += 1
+                                    </code>
+                                </pre>
+                    </section>
+
+                    <section>
+                        <h4>Boucle While avec condition d'arrêt</h4>
+                        <p>La boucle <code>while</code> peut avoir une condition d'arrêt.</p>
+                        <pre>
+                        <code>
+                                total = 0
+                                while total < 10:
+                                    num = int(input("Entrez un nombre : "))
+                                    total += num
+                                    print(f"Total actuel : {total}")
+                                        </code>
+                                    </pre>
+                    </section>
+
+
+                </div>
+
+
+                <div id="page12" class="page">
+
+                    <div class="quiz-question">
+                        <p><strong>Question 1 :</strong> Comment s'écrit une boucle while en Python?</p>
+                        <input type="checkbox" id="q1_choice1" name="q1_choices" value="choice1">
+                        <label for="q1_choice1"> while (i < 5)</label><br>
+                        <input type="checkbox" id="q1_choice2" name="q1_choices" value="choice2">
+                        <label for="q1_choice2"> loop (i = 0; i < 5; i++)</label><br>
+                        <input type="checkbox" id="q1_choice3" name="q1_choices" value="choice3">
+                        <label for="q1_choice3"> for i in range(5)</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 2 :</strong> Quelle est la condition pour qu'une boucle while continue à s'exécuter?</p>
+                        <input type="checkbox" id="q2_choice1" name="q2_choices" value="choice1">
+                        <label for="q2_choice1"> La condition est toujours vraie</label><br>
+                        <input type="checkbox" id="q2_choice2" name="q2_choices" value="choice2">
+                        <label for="q2_choice2"> La condition est toujours fausse</label><br>
+                        <input type="checkbox" id="q2_choice3" name="q2_choices" value="choice3">
+                        <label for="q2_choice3"> La condition devient fausse</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 3 :</strong> Comment incrémentez-vous une variable dans une boucle while?</p>
+                        <input type="checkbox" id="q3_choice1" name="q3_choices" value="choice1">
+                        <label for="q3_choice1"> i = i + 1</label><br>
+                        <input type="checkbox" id="q3_choice2" name="q3_choices" value="choice2">
+                        <label for="q3_choice2"> i++</label><br>
+                        <input type="checkbox" id="q3_choice3" name="q3_choices" value="choice3">
+                        <label for="q3_choice3"> both a and b</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 4 :</strong> Que se passe-t-il si la condition d'une boucle while est toujours vraie?</p>
+                        <input type="checkbox" id="q4_choice1" name="q4_choices" value="choice1">
+                        <label for="q4_choice1"> La boucle continue à s'exécuter indéfiniment</label><br>
+                        <input type="checkbox" id="q4_choice2" name="q4_choices" value="choice2">
+                        <label for="q4_choice2"> Une exception est levée</label><br>
+                        <input type="checkbox" id="q4_choice3" name="q4_choices" value="choice3">
+                        <label for="q4_choice3"> La boucle s'arrête</label><br>
+                    </div>
+
+                    <div class="quiz-question">
+                        <p><strong>Question 5 :</strong> Quelle est la meilleure utilisation d'une boucle while?</p>
+                        <input type="checkbox" id="q5_choice1" name="q5_choices" value="choice1">
+                        <label for="q5_choice1"> Lorsque le nombre d'itérations est connu à l'avance</label><br>
+                        <input type="checkbox" id="q5_choice2" name="q5_choices" value="choice2">
+                        <label for="q5_choice2"> Lorsque le nombre d'itérations est inconnu à l'avance</label><br>
+                        <input type="checkbox" id="q5_choice3" name="q5_choices" value="choice3">
+                        <label for="q5_choice3"> Lorsque le nombre d'itérations est toujours fixe</label><br>
+                    </div>
+                </div>
+
+
+                <div id="page13" class="page">
+                    <div id="finalResult d-flex flex-column justify-content-center pr-3">
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz1">
+                                    <h1>Quiz 1</h1>
+                                    <h2 id="note_quiz1"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz2">
+                                    <h1>Quiz 2</h1>
+                                    <h2 id="note_quiz2"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz3">
+                                    <h1>Quiz 3</h1>
+                                    <h2 id="note_quiz3"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz4">
+                                    <h1>Quiz 4</h1>
+                                    <h2 id="note_quiz4"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2  text-white text-center rounded shadow" id="quiz5">
+                                    <h1>Quiz 5</h1>
+                                    <h2 id="note_quiz5"></h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3 mb-2 text-white text-center rounded shadow" id="quiz6">
+                                    <h1>Quiz 6</h1>
+                                    <h2 id="note_quiz6"></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-3 mb-2  text-white text-center rounded shadow" id="note_quiz">
+                                <h1>Note</h1>
+                                <h2 id="note_finale"></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div>
+                <br /><br />
+                <nav id="SP" aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link text-light bg-secondary" href="#" onclick="showPreviousPage()">Previous</a></li>
+                        <li class="page-item"><a style="background-color: #ffc300" class="page-link text-light " href="#" onclick="showNextPage()">Next</a></li>
+                    </ul>
+                </nav>
+                <div id="certificatButton" style="display: none;">
+                    <button onclick="generateCertificate()" class="btn btn-success">Télécharger Certificat</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+    function generateCertificate() {
+        const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const fullName = "@Model.FirstName " + "@Model.LastName";
+    const note = showResultsPage();
+
+    // Définir la mise en page verticale
+
+        doc.setDrawColor(44, 125, 160); // Couleur de la bordure (#2c7da0)
+        doc.setFillColor(255, 255, 255); // Couleur de remplissage (blanc)
+
+        // Dessiner un rectangle coloré (1 cm de largeur)
+        doc.rect(10, 10, 189, 277, 'FD');
+
+    // Ajouter des informations utilisateur
+    doc.setFontSize(20);
+    doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+        doc.text('Certificate of Completion', 105, 30, { align: 'center' });
+
+        doc.setTextColor(0); // Couleur de texte par défaut (noir)
+
+    doc.setFontSize(16);
+    doc.text('This is to certify that', 105, 50, { align: 'center' });
+
+        doc.setFontSize(18);
+        doc.setTextColor(0, 119, 182) // Couleur du texte (blanc)
+
+    doc.text(fullName, 105, 70, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+    doc.setFontSize(14);
+    doc.text('Has successfully completed Python Tutorial', 105, 100, { align: 'center' });
+
+    doc.setFontSize(16);
+    doc.text('Super Course for Awesomes', 105, 120, { align: 'center' });
+
+    // Ajouter d'autres  informations selon vos besoins
+    doc.setFontSize(14);
+        doc.text('With a degree of ', 105, 135, { align: 'center' });
+        doc.setFontSize(14);
+        doc.setTextColor(180, 103, 77); // Couleur du texte (blanc)
+
+        doc.text(note + '/ 30', 105, 150, { align: 'center' });
+
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+    doc.setFontSize(16);
+        doc.text('Director', 105, 180, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Idriss Echakouki', 105, 190, { align: 'center' });
+        doc.setTextColor(0, 128, 128); // Couleur du texte (blanc)
+
+        doc.text('Associate Professor', 105, 210, { align: 'center' });
+        doc.setTextColor(0); // Couleur du texte (blanc)
+
+        doc.text('Mr. Abdelkrim El-fetouaki', 105, 220, { align: 'center' });
+
+    doc.setFontSize(12);
+        doc.text('Visit our website for verification:', 105, 240, { align: 'center' });
+        doc.setTextColor(188, 71, 73); // Couleur du texte (blanc)
+
+    doc.text('https://www.protutoria.com', 105, 250, { align: 'center' });
+
+    // Télécharger le PDF
+    doc.save("Certificate.pdf");
+    }
+
+
+
+    var currentPage = 1;
+    var totalPages = 13;
+
+    function showPage(pageId) {
+        // Masquer toutes les pages
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+
+        // Afficher la page spécifique
+        var pageToShow = document.getElementById(pageId);
+        if (pageToShow) {
+            pageToShow.style.display = 'block';
+        }
+    }
+
+    function showPreviousPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            showPage('page' + currentPage);
+        }
+        var title0 = document.getElementById('title' + (currentPage + 1));
+        var title = document.getElementById('title' + currentPage);
+
+        title0.style.color = '#2a2e34';
+        title.style.color = '#ffc300';
+
+    }
+
+    function showNextPage() {
+        if (currentPage < 12) {
+            currentPage++;
+            showPage('page' + currentPage);
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+
+            title0.style.color = '#2a2e34';
+            title.style.color = '#ffc300';
+
+        } else {
+            currentPage++;
+            var title0 = document.getElementById('title' + (currentPage - 1));
+            var title = document.getElementById('title' + currentPage);
+            title0.style.color = '#2a2e34';
+            title.style.color = '#ef233c';
+            showResultsPage();
+            showCertificatButton()
+        }
+
+    }
+
+    function showCertificatButton() {
+        // Masquer la pagination
+        var pagination = document.getElementById('SP');
+        if (pagination) {
+            pagination.style.display = 'none';
+        }
+
+        // Afficher le bouton "Résultat"
+        var resultsButton = document.getElementById('certificatButton');
+        if (resultsButton) {
+            resultsButton.style.display = 'block';
+        }
+    }
+
+
+
+    function showResultsPage() {
+        // Masquer toutes les pages
+        showPage('page13');
+        var correctAnswersPages = [
+            // quiz1
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [1, 0, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            // quiz2
+            [
+                [0, 0, 1],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0],
+                [0, 1, 0]
+            ],
+            //quiz3
+            [
+                [0, 1, 0],
+                [1, 0],
+                [1, 0],
+                [0, 1],
+                [1, 0]
+            ],
+            //quiz4
+            [
+                [1, 0, 0],
+                [0, 1, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 0, 3]
+            ],
+            //quiz5
+            [
+                [0, 1, 0],
+                [0, 0, 1],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0]
+            ],
+            //quiz6
+            [
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [1, 0, 0],
+                [0, 1, 0]
+            ]
+
+        ]
+
+        var pages = [2, 4, 6, 8, 10, 12];
+        // pour comparer les resultat
+        var totalQuestions = 5; // Le nombre total de questions par page
+        var totalScore = 0; // Le score total de l'utilisateur
+
+        for (let i = 0; i < pages.length; i++) {
+            var pageId = 'page' + pages[i];
+            var userResponses = extractUserResponses(pageId);
+            var correctAnswers = correctAnswersPages[i]; // Récupérer les réponses correctes
+
+            var pageScore = 0; // Score de la page actuelle
+
+            for (let j = 0; j < totalQuestions; j++) {
+                var isQuestionCorrect = true;
+
+                // Comparer chaque réponse de l'utilisateur avec la réponse correcte
+                for (let k = 0; k < userResponses[j].length; k++) {
+                    if (userResponses[j][k] !== correctAnswers[j][k]) {
+                        isQuestionCorrect = false;
+                        break;
+                    }
+                }
+
+                if (isQuestionCorrect) {
+                    pageScore++;
+                }
+            }
+
+            totalScore += pageScore;
+            var noteId = 'note_quiz' + (i + 1);
+            document.getElementById(noteId).innerHTML = '<h2>' + pageScore + '/' + totalQuestions + '</h2>';
+        }
+
+        var noteFinale = document.getElementById('note_finale');
+        noteFinale.innerHTML = '<h2>' + totalScore + '/' + (totalQuestions * pages.length) + '</h2>';
+        return totalScore;
+    }
+
+
+
+
+
+    function extractUserResponses(pageId) {
+        var quizQuestions = document.getElementById(pageId).getElementsByClassName('quiz-question');
+        var userResponses = [];
+
+        for (let i = 0; i < quizQuestions.length; i++) {
+            var checkboxes = quizQuestions[i].querySelectorAll('input[type="checkbox"]');
+            var choices = [];
+
+            checkboxes.forEach(function (checkbox) {
+                choices.push(checkbox.checked ? 1 : 0);
+            });
+
+            userResponses.push(choices);
+        }
+
+        return userResponses;
+    }
+
+
+
+    // Appeler showPage avec l'identifiant de la première page lors du chargement initial
+    document.addEventListener("DOMContentLoaded", function () {
+        showPage('page1');
+    });</script>
+
+
